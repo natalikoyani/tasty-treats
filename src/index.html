@@ -5,13 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasty Treats</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <!-- Временная ссылка на страницу Favorites -->
     <a href="./favorites.html">Favorites</a>
+    <!-- -------------------------------------- -->
     <load ="partials/header.html" />
-    <load ="partials/home-hero.html" />
-    <load ="partials/home-recipes.html" />
+    <load ="partials/hero.html" />
+    <!-- Основная часть Homepage, я сделала ей обертку для удобства -->
+    <section class="main">
+      <div class="container">
+        <load ="partials/categories.html" />
+        <load ="partials/popular-recipes.html" />
+        <load ="partials/search-filters.html" />
+        <load ="partials/cards-gallery.html" />
+      </div>
+    </section>
+    <!-- ------------------------------------------------------- -->
     <load ="partials/recipe-modal.html" />
     <load ="partials/hamburger-menu.html" />
     <script type="module" src="/main.js"></script>
