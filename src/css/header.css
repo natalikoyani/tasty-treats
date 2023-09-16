@@ -1,6 +1,6 @@
 :root {
-  --beck-color: #f8f8f8;
-  --main-txt-color: #050505;
+  --primary-light-color: #f8f8f8;
+  --primary-dark-color: #050505;
   --accent-color: #9bb537;
 }
 
@@ -8,10 +8,16 @@
   top: 0;
   width: 100%;
   z-index: 3;
-  padding-top: 20px;
-  padding-bottom: 14px;
+  padding-top: 28px;
+  padding-bottom: 50px;
 }
 
+@media only screen and (min-width: 1280px) {
+  .header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 .container {
   /* Basic */
   width: 100%;
@@ -43,6 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-right: auto;
   height: 24px;
 }
 
@@ -85,6 +92,24 @@
   align-items: top;
 }
 
+.icon-container {
+  display: flex;
+  margin-left: auto;
+  gap: 14px;
+}
+
+@media only screen and (min-width: 376px) {
+  .icon-container {
+    margin: 0;
+    gap: 18px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .icon-container {
+    gap: 24px;
+  }
+}
+
 .shopping-cart {
   min-height: 24px;
   min-width: 24px;
@@ -101,8 +126,8 @@
 }
 
 .menu-toggle {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,11 +152,13 @@
 @media only screen and (min-width: 375px) {
   .switch-theme {
     /* min-height: 46px; */
-    min-width: 20px;
+    width: 46px;
     display: flex;
+    gap: 14px;
+    align-items: center;
     margin: 0;
     padding: 0;
-    /* background-color: transparent; */
+    background-color: transparent;
     cursor: pointer;
     border: none;
     outline: none;
@@ -139,6 +166,5 @@
 }
 
 .menu-icon {
-  /* stroke: var(--main-txt-color); */
-  color: #050505;
+  stroke: var(--primary-dark-color);
 }
