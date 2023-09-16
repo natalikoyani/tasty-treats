@@ -52,8 +52,9 @@
 
   /* Зеленый */
   --accent-color: #9BB537;
+}
 
-
+.body {
   font-family: 'Inter', sans-serif;
   color: var(--primary-dark-color);
   background-color: var(--primary-light-color);
