@@ -1,46 +1,147 @@
-
-.backdrop-recipe-info{
-   background-color: black;
+.backdrop-recipe-info {
+  background-color: black;
 }
-.modal-container{
-    width: 335px;
-    height: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+.modal-recipe {
+  position: relative;
+}
+.modal-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 8px;
 
-    border-radius: 8px;
-    background-color: var(--additional-light-color)
-  }
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-dark-color);
+  background-color: var(--additional-light-color);
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.video-recipe {
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(
+      0deg,
+      rgba(5, 5, 5, 0.4) 0%,
+      rgba(5, 5, 5, 0.4) 100%
+    ),
+    url(<path-to-image>), lightgray -109.38px 0px / 174.156% 100% no-repeat;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 19px;
+}
+.name-recipe {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1, 33;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.modal-rating {
+  display: flex;
+  color: rgba(5, 5, 5, 0.5);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  margin-bottom: 36px;
+}
+.reting-stars {
+  padding: 2px;
+  fill: orange;
+  margin-right: 1px;
+}
+.number-reting {
+  margin-right: 6px;
+}
+.time-cook {
+  margin-left: 16px;
+}
+.recipe-ingredients {
+  margin-bottom: 37px;
+}
+.ingredient {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(5, 5, 5, 0.1);
+  padding-bottom: 6px;
+}
+.measure-ingredients {
+  color: rgba(5, 5, 5, 0.5);
+}
+.tags-modal {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.16;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.tag-modal {
+  border-radius: 35px;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  border-radius: 35px;
+  padding: 8px 16px;
+}
+.instructions {
+  color: rgba(5, 5, 5, 0.8);
 
+  font-size: 14px;
 
+  font-weight: 400;
+  line-height: 1.28;
+  margin-bottom: 40px;
+}
+.modal-button {
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-dark-color);
+  border-radius: 15px;
+  padding: 12px 24px;
+  border: 1px solid #9bb537;
+  font-size: 14px;
 
+  font-weight: 500;
+}
+.modal-button:hover {
+  background: #9bb537;
+  color: var(--primary-light-color);
+}
+.add {
+  margin-right: 14px;
+}
+
+.close-modal-recipe {
+  position: absolute;
+  top: 14px;
+  right: 7px;
+  background-color: transparent;
+  border: none;
+}
 
 /* ---------Mobile---------- */
 @media screen and (min-width: 375px) {
-    .container {
-      width: 335px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+  .modal-container {
+    width: 335px;
   }
-  
-  /* ---------Tablet---------- */
-  @media screen and (min-width: 768px) {
-      .container {
-        width: 768px;
-        padding-left: 32px;
-        padding-right: 32px;
-      }
+}
+
+/* ---------Tablet---------- */
+@media screen and (min-width: 768px) {
+  .modal-container {
+    width: 531px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
-  
-  /* ----------Desktop-------- */
-  @media screen and (min-width: 1280px) {
-    .container {
-      width: 1280px;
-      padding-left: 100px;
-      padding-right: 100px;
-    }
-  }
+}
+
+/* ----------Desktop-------- */
+@media screen and (min-width: 1280px) {
+}
