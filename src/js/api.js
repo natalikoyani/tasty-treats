@@ -11,7 +11,7 @@ const recipes = 'https://tasty-treats-backend.p.goit.global/api/recipes'
 //const orders = 'https://tasty-treats-backend.p.goit.global/api/orders' 	
 
 export const getEvents = async () => {
-    return axios({
+    return await axios({
         method: 'get',
         baseURL: events,
     })
@@ -22,7 +22,7 @@ export const getEvents = async () => {
         .catch(error => console.log(error))
 }
 
-export const getAreas = () => {
+export const getAreas = async () => {
     return axios({
         method: 'get',
         baseURL: areas,
@@ -34,7 +34,7 @@ export const getAreas = () => {
     .catch(error => console.log(error))
 }
 
-export const getCategories = () => {
+export const getCategories = async () => {
     return axios({
         method: 'get',
         baseURL: categories,
@@ -46,7 +46,7 @@ export const getCategories = () => {
     .catch(error => console.log(error))
 }
 
-export const getIngredients = () => {
+export const getIngredients = async () => {
     return axios({
         method: 'get',
         baseURL: ingredients,
@@ -58,7 +58,7 @@ export const getIngredients = () => {
     .catch(error => console.log(error))
 }
 
-export const getPopularRecipes = () => {
+export const getPopularRecipes = async () => {
     return axios({
         method: 'get',
         baseURL: popular,
@@ -70,7 +70,7 @@ export const getPopularRecipes = () => {
     .catch(error => console.log(error))
 }
 
-export const getRecipeById = (id) => {
+export const getRecipeById = async (id) => {
     return axios({
         method: 'get',
         baseURL: `${recipes}/${id}`,
@@ -82,7 +82,7 @@ export const getRecipeById = (id) => {
     .catch(error => console.log(error))
 }
 
-export const getRecipes = ({ title, category, area, ingredient, time, page, limit }) => {
+export const getRecipes = async({ title, category, area, ingredient, time, page, limit }) => {
 
     const search = { title, category, area, ingredient, time, page, limit }
 
