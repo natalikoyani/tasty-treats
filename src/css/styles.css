@@ -36,7 +36,7 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url(../fonts/Inter-Italic_d34411fedc6f06b7fb44d8500d4d244a.otf) format('otf');
+  src: url(./fonts/Inter-Italic_d34411fedc6f06b7fb44d8500d4d244a.otf) format('otf');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
