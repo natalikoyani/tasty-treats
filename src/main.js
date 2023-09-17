@@ -7,5 +7,3 @@ import debounce from 'lodash.debounce';
 
 import './js/hero.js';
 import './js/fillCategories';
-import './js/popular-recipes.js';
-import './js/render-popular.js';
