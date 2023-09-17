@@ -12,5 +12,5 @@ import { renderRecipes } from './js/render-recipe-card.js';
 
 const cardGallery = document.querySelector('.cards-gallery');
 
-// const recipes = await getRecipes({});
-// cardGallery.innerHTML = await renderRecipes(recipes);
+const recipes = await getRecipes({});
+cardGallery.innerHTML = await renderRecipes(recipes);
