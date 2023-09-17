@@ -8,8 +8,8 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
     
-    <script type="module" crossorigin src="/Team_10/assets/index-7755718c.js"></script>
-    <link rel="stylesheet" href="/Team_10/assets/index-44bb2b78.css">
+    <script type="module" crossorigin src="/Team_10/assets/fillCategories-e2bb3d48.js"></script>
+    <link rel="stylesheet" href="/Team_10/assets/fillCategories-c642f9c5.css">
   </head>
   <body>
     <!-- Временная ссылка на страницу Favorites -->
@@ -22,8 +22,62 @@
     <section class="main">
       <div class="container">
         <!-- Кнопка All Categories будет находится в этом файле -->
+<div class="left-part">
+  <div class="categories-container">
+    <button class="all-categories-button">All categories</button>
+    <div class="categories-box">
+      <ul class="categories-list"></ul>
+    </div>
+  </div>
+</div>
+
         
         <!-- Search input будет находиться в этом файле (вместе с фильтрами, если успеем) -->
+<div class="right-part">
+  <div class="user-interaction">
+    <div class="user-search-btn select-elements">
+      <p class="desc-input">Search</p>
+      <div class="search-elements">
+        <input
+          class="search-input"
+          type="text"
+          name="userSearch"
+          placeholder="Enter Text"
+        />
+        <button type="button" aria-label="search btn" class="search-btn">
+          <svg class="search-svg" width="18px" height="18px">
+            <use class="search-icon" href="/Team_10/assets/icons-008de83c.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="select-elements search-element-time">
+      <p class="desc-input">Time</p>
+      <select class="select-list" name="time">
+        <option value="default" class="selection-unit" selected>0 min</option>
+      </select>
+    </div>
+    <div class="select-elements search-element-area">
+      <p class="desc-input">Area</p>
+      <select class="select-list select-list-area" name="area">
+        <option value="default" class="selection-unit" selected>Region</option>
+      </select>
+    </div>
+    <div class="select-elements search-element-ingred">
+      <p class="desc-input">Ingredients</p>
+      <select class="select-list select-list-ingr" name="area">
+        <option value="default" class="selection-unit" selected>Product</option>
+      </select>
+    </div>
+  </div>
+  <!-- <div class="button-reset">
+    <button class="btn-reset" type="button">Reset the filter</button>
+    <svg class="icon-reset" width="16px" height="16px">
+      <use href="./img/icons.svg#x-search"></use>
+    </svg>
+  </div> -->
+</div>
+
         
       </div>
     </section>
