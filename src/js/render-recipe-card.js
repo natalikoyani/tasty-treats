@@ -1,8 +1,7 @@
 export const renderRecipes = (recipes) => {
     
-    const favorities = localStorage
-        .getItem('favoriteRecipes')
-        ?.map(recipe => recipe._id) || []
+    const lsFavorities = localStorage.getItem('favoriteRecipes') ? JSON.parse(localStorage.getItem('favoriteRecipes')) : []
+    const favorities = Array.isArray(lsFavorities) ? lsFavorities.map(recipe => recipe._id) : []
 
     return recipes
         .map(recipe => {
@@ -12,12 +11,16 @@ export const renderRecipes = (recipes) => {
             let roundedRating = Math.round(rating)
 
             return  `<div class="recipe-card"
-            style="
-            background-image: linear-gradient(transparent,  #05050552),
-            url(${thumb});"
+            style="background: linear-gradient(1deg, rgba(5, 5, 5, 0.60) 4.82%, rgba(5, 5, 5, 0.00) 108.72%), url(${thumb}), lightgray -29.5px 0px / 125.194% 112.544% no-repeat;"
             >
 
-        <svg class="heart-svg${isFavorite > 0 ? ' heart-filled' : ''}">
+        <svg class="heart-svg${isFavorite > 0 ? ' heart-filled' : ''}"
+        data-_id="${ _id }"
+        data-title="${ title }"
+        data-description="${ description }"
+        data-thumb="${ thumb }"
+        data-rating="${ rating }"
+        >
             <use href="./img/icons.svg#heart"></use>
         </svg>
 
