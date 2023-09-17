@@ -94,18 +94,6 @@ creatMarkupFavorite();
 //       })
 //     );
 
-//     // Pagination
-//     // if (window.screen.width >= 768) {
-//     //   createGalleryCard(favoritesRecipes.slice(0, 12), listFav);
-//     //   if (favoritesRecipes.length <= 12) {
-//     //     btn_conteiner_pagination.style.display = "none";
-//     //   }
-//     // } else {
-//     //   if (favoritesRecipes.length <= 9) {
-//     //     createGalleryCard(favoritesRecipes.slice(0, 9), listFav);
-//     //     btn_conteiner_pagination.style.display = "none";
-//     //   }
-//     // }
 //   }
 // }
 
