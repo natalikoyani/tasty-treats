@@ -26,7 +26,7 @@
 }
 
 .popular-recipe-list {
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   display: flex;
   flex-direction: column;
   row-gap: 24px;
@@ -35,7 +35,7 @@
 .popular-recipe-item {
   transition: all 0.4s ease 0s;
   border-radius: 8px;
-  padding: 4px;
+  /* padding: 4px; */
   cursor: pointer;
 }
 
