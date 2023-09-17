@@ -64,15 +64,15 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 250px;
+    height: 287px;
+    flex-shrink: 0;
     gap: 8px;
     padding: 16px;
     border-radius: 15px;
     object-fit: fill;
     background-position: center;
     background-size: cover;
-    /* background-image: 
-    linear-gradient(transparent,  #05050552),
-    url('https://www.themealdb.com/images/media/meals/sxxpst1468569714.jpg'); */
     position: relative;
     height: 335px;
 }
