@@ -1,3 +1,9 @@
+.cards-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
 .heart-svg {
     width: 22px;
     height: 22px;
@@ -68,8 +74,7 @@
     linear-gradient(transparent,  #05050552),
     url('https://www.themealdb.com/images/media/meals/sxxpst1468569714.jpg'); */
     position: relative;
-    width: 250px;
-    height: 287px;
+    height: 335px;
 }
 
 .recipe-title {

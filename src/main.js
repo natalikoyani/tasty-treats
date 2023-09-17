@@ -7,3 +7,10 @@ import debounce from 'lodash.debounce';
 
 import './js/hero.js';
 import './js/fillCategories';
+import { getRecipes } from './js/api.js';
+import { renderRecipes } from './js/render-recipe-card.js';
+
+const cardGallery = document.querySelector('.cards-gallery');
+
+// const recipes = await getRecipes({});
+// cardGallery.innerHTML = await renderRecipes(recipes);
