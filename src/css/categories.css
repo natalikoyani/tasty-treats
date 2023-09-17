@@ -1,0 +1,132 @@
+/* Tablet 768 - 1279 */
+@media screen and (min-width: 768px) {
+  .main-container {
+    display: flex;
+    gap: 32px;
+  }
+}
+/* Desktop 1280+*/
+@media screen and (min-width: 1280px) {
+  .main-container {
+    display: flex;
+    gap: 64px;
+  }
+}
+.main {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    margin-bottom: 64px;
+  }
+}
+.categories-container {
+  margin-bottom: 40px;
+}
+/* Tablet 768+*/
+@media screen and (min-width: 768px) {
+  .categories-container {
+    margin-bottom: 64px;
+  }
+}
+.categories-box {
+  width: 326px;
+  height: 198px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+/* Tablet 768+*/
+@media screen and (min-width: 768px) {
+  .categories-box {
+    width: 176px;
+    height: 416px;
+  }
+}
+/* Desktop 1280+*/
+@media screen and (min-width: 1280px) {
+  .categories-box {
+    width: 235px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: #0505052e;
+}
+
+.left-part {
+  padding-top: 26px;
+}
+
+.all-categories-button {
+  padding: 14px 28px;
+  min-width: 174px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.21;
+  color: rgba(5, 5, 5, 0.5);
+  border-radius: 15px;
+  background-color: var(--primary-light-color);
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  margin-bottom: 24px;
+}
+/* Tablet 768+*/
+@media screen and (min-width: 768px) {
+  .all-categories-button {
+    margin-bottom: 30px;
+  }
+}
+/* Desktop 1280+*/
+@media screen and (min-width: 1280px) {
+  .all-categories-button {
+    margin-bottom: 42px;
+  }
+}
+.all-categories-button:hover,
+.all-categories-button:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-light-color);
+}
+
+.name-category {
+  border: none;
+  background-color: var(--primary-light-color);
+  color: rgba(5, 5, 5, 0.3);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+}
+/* Tablet 768+*/
+@media screen and (min-width: 768px) {
+  .name-category {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+.name-category:hover,
+.name-category:focus {
+  color: var(--accent-color);
+  outline: 0;
+}
+
+.category-item {
+  margin-bottom: 18px;
+}
+.category-item:last-child {
+  margin-bottom: 0;
+}
+/* Tablet 768+*/
+@media screen and (min-width: 768px) {
+  .category-item {
+    margin-bottom: 24px;
+  }
+}
