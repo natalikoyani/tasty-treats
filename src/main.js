@@ -18,4 +18,4 @@ async function renderGallery() {
     cardGallery.innerHTML = await renderRecipes(recipes)
 }
 
-await renderGallery();
+renderGallery();
