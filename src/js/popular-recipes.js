@@ -1,56 +1,22 @@
 import axios from 'axios';
-// import { updatePopularRecipes } from './api';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-const popularRecipesUrl =
-  'https://tasty-treats-backend.p.goit.global/api/recipes/popular';
+import { getPopularRecipes } from './api';
+import {
+  createRecipeMarkup,
+  createMarkupPopularRecipes,
+} from './render-popular';
 
-const container = document.querySelector('.popular-recipes-card');
+const popularRecipesContainer = document.querySelector('.popular-recipes-card');
 
 window.addEventListener('resize', updatePopularRecipes);
 updatePopularRecipes();
 
 async function updatePopularRecipes() {
-  await axios
-    .get(popularRecipesUrl)
-    .then(response => {
-      //   console.log(response);
-      const popularRecipes = response.data;
-      const numElements = window.innerWidth < 768 ? 2 : 4;
-      const slicedRecipes = popularRecipes.slice(0, numElements);
-      const markup = createMarkupPopularRecipes(slicedRecipes);
-      container.innerHTML = markup;
-    })
-    .catch(error => {
-      console.error('Error fetching popular recipes:', error);
-    });
-}
-
-function createRecipeMarkup(recipe) {
-  return `<li
-      class="popular-recipe-item"
-    >
-      <button class="popular-recipe-card js-card-button" aria-label="popular recipe${recipe.title}" data-id="${recipe._id}">
-        <img
-          class="popular-card-image"
-          src="${recipe.preview}"
-          alt="${recipe.title}"
-        >
-        <div class="popular-card-content">
-          <h3 class="popular-card-heading">${recipe.title}</h3>
-          <p class="popular-card-description">
-            ${recipe.description}
-          </p>
-        </div>
-      </button>
-    </li>`;
-}
-
-function createMarkupPopularRecipes(recipes) {
-  return `<ul class="popular-recipe-list list">
-      ${recipes.reduce(
-        (accumulator, recipe, index) =>
-          accumulator + createRecipeMarkup(recipe, index + 1),
-        ''
-      )}
-    </ul>`;
+  await getPopularRecipes().then(response => {
+    const numElements = window.innerWidth < 768 ? 2 : 4;
+    const slicedRecipes = response.slice(0, numElements);
+    const markup = createMarkupPopularRecipes(slicedRecipes);
+    popularRecipesContainer.innerHTML = markup;
+  });
 }
