@@ -73,7 +73,7 @@ async function getRecipeById(id) {
     }
 }
 
-async function getRecipes({ title, category, area, ingredient, time, page, limit }) {
+async function getRecipes({ title, category, area, ingredient, time, page, limit=20 }) {
     
     const search = { title, category, area, ingredient, time, page, limit };
 
@@ -90,7 +90,7 @@ async function getRecipes({ title, category, area, ingredient, time, page, limit
         });
 
         if (!response.data) throw new Error(response.status);
-        return response.data;
+        return response.data.results;
 
     } catch (error) {
         Notify('Oops! Something went wrong! Try again later');
