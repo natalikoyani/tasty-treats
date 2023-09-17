@@ -1,0 +1,86 @@
+.heart-svg {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    fill: #f8f8f8;
+}
+
+.heart-filled {
+    fill: #f8f8f8;
+}
+
+.star-svg {
+    width: 18px;
+    height: 18px;
+    fill: #f8f8f81f;
+}
+
+.star-filled {
+    fill: #EEA10C;
+}
+
+.recipe-btn {
+    width: 93px;
+    height: 31px;
+    background-color: #9BB537;
+    border-radius: 8px;
+    color: #F8F8F8;
+    border: unset;
+}
+
+.recipe-rating {
+    display: flex;
+}
+
+.recipe-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating-number {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    color: #F8F8F8;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-description {
+    font-size: 12px;
+    color: #F8F8F8;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 15px;
+    object-fit: fill;
+    background-position: center;
+    background-size: cover;
+    /* background-image: 
+    linear-gradient(transparent,  #05050552),
+    url('https://www.themealdb.com/images/media/meals/sxxpst1468569714.jpg'); */
+    position: relative;
+    width: 250px;
+    height: 287px;
+}
+
+.recipe-title {
+    color: #F8F8F8;
+    font-size: 14px;
+}
+
+.two-line-ellipsis {
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
