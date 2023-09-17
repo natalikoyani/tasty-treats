@@ -15,7 +15,6 @@
 @import url('./recipe-modal.css');
 @import url('./hamburger-menu.css');
 
-
 /* -----------Шрифты----------- */
 
 @font-face {
@@ -31,27 +30,25 @@
   src: url(../fonts/Inter-SemiBold.ttf);
 }
 
-
 /* ----------Базовые стили----------- */
 
 :root {
-
   /* --------Цвета---------- */
 
   /* Черный и серый текст в светлой теме, фон модалок в темной теме */
   --primary-dark-color: #050505;
 
   /* Фон и белый текст в светлой теме */
-  --primary-light-color: #F8F8F8;
+  --primary-light-color: #f8f8f8;
 
   /* Фон модалок в светлой теме, белый и серый текст в темной теме */
-  --additional-light-color: #FFFFFF;
+  --additional-light-color: #ffffff;
 
   /* Фон в темной теме */
   --additional-dark-color-: #161616;
 
   /* Зеленый */
-  --accent-color: #9BB537;
+  --accent-color: #9bb537;
 }
 
 .body {
@@ -78,11 +75,11 @@
 
 /* ---------Tablet---------- */
 @media screen and (min-width: 768px) {
-    .container {
-      width: 768px;
-      padding-left: 32px;
-      padding-right: 32px;
-    }
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 /* ----------Desktop-------- */
