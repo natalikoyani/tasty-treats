@@ -18,11 +18,17 @@
     <!-- Основная часть Homepage, я сделала ей обертку для удобства -->
     <section class="main">
       <div class="container">
-        <load ="partials/categories.html" />
-        <load ="partials/popular-recipes.html" />
-        <load ="partials/search-filters.html" />
-        <div class="cards-gallery">
-          <!-- Cюда рендерятся карточки -->
+        <div class="main-box">
+          <div class="main-left-part">
+            <load ="partials/categories.html" />
+            <load ="partials/popular-recipes.html" />
+          </div>
+          <div class="main-right-part">
+            <load ="partials/search-filters.html" />
+            <div class="cards-gallery">
+            <!-- Cюда рендерятся карточки -->
+            </div>
+          </div>
         </div>
       </div>
     </section>

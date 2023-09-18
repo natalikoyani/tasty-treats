@@ -11,8 +11,8 @@
   </symbol>
   <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="x-search">
     <title>x-search</title>
-    <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.5556" stroke="#000" d="M24 8l-16 16"></path>
-    <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.5556" stroke="#000" d="M8 8l16 16"></path>
+    <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.5556" d="M24 8l-16 16"></path>
+    <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.5556" d="M8 8l16 16"></path>
   </symbol>
   <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 32" id="filter-arrow">
     <title>filter-arrow</title>
