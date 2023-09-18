@@ -13,3 +13,5 @@ import './js/fillCategories';
 import './js/popular-recipes.js';
 
 renderGallery();
+
+// import './js/favorites';

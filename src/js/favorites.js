@@ -1,3 +1,4 @@
+// ====== Adaptive
 const image = document.querySelector('.js-hero-img');
 
 window.addEventListener('resize', showImg);
@@ -38,7 +39,7 @@ function creatMarkupFavorite(arr, list) {
     return (list.innerHTML = markup);
   } else {
     markupEmpty = `<div class="hero-mob-wrapper">
-          <svg class="hero-fav-svg" width="" height="">
+          <svg class="hero-fav-svg">
           <use href="./img/icons.svg#hat"></use>
         </svg> 
           <p class="hero-text-fav">
