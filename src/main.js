@@ -9,6 +9,7 @@ import { renderGallery } from './js/render-card-gallery.js';
 
 import './js/hero.js';
 import './js/fillCategories';
-import './js/popular-recipes.js'
+import './js/popular-recipes.js';
+import './js/recipe-modal.js';
 
 renderGallery();
