@@ -117,7 +117,6 @@
   padding: 12px 24px;
   border: 1px solid #9bb537;
   font-size: 14px;
-
   font-weight: 500;
 }
 .modal-button:hover {
@@ -125,7 +124,7 @@
   color: var(--primary-light-color);
 }
 .add {
-  margin-right: 14px;
+  margin-right: 5px;
 }
 
 .close-modal-recipe {
