@@ -3,18 +3,13 @@ import { renderRecipes } from './render-recipe-card';
 import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix';
 
-const categories = document.querySelector('.categories-list');
-const allCategoriesBtn = document.querySelector('.all-categories-button');
 const cardGallery = document.querySelector('.cards-gallery');
 const searchInput = document.querySelector('.search-input');
-const btnReset = document.querySelector('.btn-reset');
-
-categories.addEventListener('click', onCategoryClick);
 
 let previousRecipes = [];
 let activeButton = null;
 
-function onCategoryClick(event) {
+export function onCategoryClick(event) {
   const clickedButton = event.target;
 
   if (clickedButton.className === 'name-category') {
@@ -50,9 +45,7 @@ function clearPreviousData() {
   previousRecipes = [];
 }
 
-searchInput.addEventListener('input', debounce(handlerInput, 300));
-
-function handlerInput(event) {
+export function handlerInput(event) {
   const query = event.target.value;
   searchPerform(query.trim());
 }
@@ -80,10 +73,10 @@ async function searchPerform(query) {
     console.log(error);
   }
 }
-allCategoriesBtn.addEventListener('click', onAllCategoriesClick);
 
-function onAllCategoriesClick() {
+export function onAllCategoriesClick() {
   clearPreviousData();
+  searchInput.value = '';
   if (activeButton !== null) {
     activeButton.classList.remove('active-category');
     activeButton = null;
@@ -91,10 +84,9 @@ function onAllCategoriesClick() {
   searchPerform('');
 }
 
-btnReset.addEventListener('click', handlerReset);
-
-function handlerReset() {
+export function handlerReset() {
   if (searchInput) {
     searchInput.value = '';
   }
+  searchPerform('');
 }

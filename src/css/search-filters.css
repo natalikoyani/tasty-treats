@@ -26,6 +26,7 @@
   padding-left: 48px;
   background-color: var(--primary-light-color);
   outline: 0;
+  transition: color var(--transition-function);
 }
 
 .search-input:hover,
