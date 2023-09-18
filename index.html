@@ -8,14 +8,62 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
     
-    <script type="module" crossorigin src="/Team_10/assets/main-20b16ccb.js"></script>
-    <link rel="stylesheet" href="/Team_10/assets/main-0eef65d4.css">
+    <script type="module" crossorigin src="/Team_10/assets/main-a77d68ad.js"></script>
+    <link rel="stylesheet" href="/Team_10/assets/main-02ed46a6.css">
   </head>
   <body>
     <!-- Временная ссылка на страницу Favorites -->
     <a href="./favorites.html">Favorites</a>
     <!-- -------------------------------------- -->
-    
+    <section class="header">
+  <div class="container header-container">
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="../index.html" class="link nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="../favorites.html" class="link nav-link">Favorites</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="logo-container">
+      <a class="link logo" href="../index.html"
+        ><span class="logo-header">tasty</span>treats.</a
+      >
+    </div>
+    <div class="icon-container">
+      <!-- <button class="shopping-cart">
+        <svg class="cart-icon" width="24" height="24">
+          <use href="../img/icons.svg#shopping-cart"></use>
+        </svg>
+      </button> -->
+      <a
+        class="link shopping-cart"
+        rel="noopener noreferrer"
+        href="tel:+38073000000"
+      >
+        <svg class="cart-icon" width="24" height="24">
+          <use href="../img/icons.svg#shopping-cart"></use>
+        </svg>
+      </a>
+      <a class="link switch-theme" href="#">
+        <svg class="switch-icon" width="46" height="20">
+          <use href="../img/icons.svg#switch-grey" width="46" height="20"></use>
+        </svg>
+      </a>
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="menu-icon" width="32" height="32">
+          <use href="../img/icons.svg#hamburger"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
 
     <section class="hero-section">
   <div class="container hero-container">
@@ -74,7 +122,7 @@
         />
         <button type="button" aria-label="search btn" class="search-btn">
           <svg class="search-svg" width="18px" height="18px">
-            <use class="search-icon" href="/Team_10/assets/icons-ace49e9a.svg#search"></use>
+            <use class="search-icon" href="/Team_10/assets/icons-1dc44250.svg#search"></use>
           </svg>
         </button>
       </div>
@@ -82,7 +130,7 @@
     <div class="button-reset">
       <button class="btn-reset" type="button">
         <svg class="icon-reset" width="16px" height="16px">
-          <use href="/Team_10/assets/icons-ace49e9a.svg#x-search"></use>
+          <use href="/Team_10/assets/icons-1dc44250.svg#x-search"></use>
         </svg>
         Reset the filter
       </button>
