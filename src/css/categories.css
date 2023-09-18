@@ -70,6 +70,8 @@
   background-color: var(--primary-light-color);
   border: 1px solid rgba(5, 5, 5, 0.2);
   margin-bottom: 24px;
+  transition: background-color var(--transition-function),
+    color var(--transition-function);
 }
 /* Tablet 768+*/
 @media screen and (min-width: 768px) {
@@ -96,6 +98,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.28;
+  transition: color var(--transition-function);
 }
 /* Tablet 768+*/
 @media screen and (min-width: 768px) {
@@ -121,4 +124,7 @@
   .category-item {
     margin-bottom: 24px;
   }
+}
+.active-category {
+  color: var(--accent-color);
 }

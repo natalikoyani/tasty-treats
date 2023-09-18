@@ -3,9 +3,31 @@
 }
 
 .right-part {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .left-part {
     margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-box {
+        display: flex;
+        gap: 32px;
+    }
+
+    .left-part {
+        margin-bottom: 64px;
+        padding-top: 26px;
+    }
+
+    .right-part {
+        margin-bottom: 14px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .main-box {
+        gap: 63px;
+    }
 }
