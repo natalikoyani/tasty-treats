@@ -1,21 +1,29 @@
-
 import { renderTags } from './render-tags';
 import { renderIngridients } from './render-ingridients';
+import { renderVideo } from './render-video';
+import { renderInstruction } from './renfer-inrtruction';
 
-export function renderModalRecipe(recipe){
+export function renderModalRecipe(recipe) {
+  const {
+    _id,
+    title,
+    instructions,
+    thumb,
+    time,
+    youtube,
+    tags,
+    ingredients,
+    rating,
+  } = recipe;
+  let roundedRating = Math.round(rating);
 
-const {_id,title,instructions,thumb,time,youtube,tags,ingredients,rating} = recipe;
-
-  return `<section class="backdrop-recipe-info  js-modal-recipe" data-modal>
-    <div class="modal-container modal-recipe">
-      <div class="js-create-modal">
-        <h2 class="name-recipe-tablet">${title}</h2>
+  return `<h2 class="name-recipe-tablet">${title}</h2>
         <div>
           <iframe
             class="video-recipe"
             width="295"
             height="295"
-            src="${youtube}"
+            src="${renderVideo(youtube)}"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -38,19 +46,29 @@ const {_id,title,instructions,thumb,time,youtube,tags,ingredients,rating} = reci
           <div class="modal-rating">
             <p class="number-reting">${rating}</p>
             <div>
-              <svg class="reting-stars" width="18" height="18">
+              <svg class="reting-stars${
+                roundedRating > 0 ? ' star-filled' : ''
+              }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
-              <svg class="reting-stars" width="18" height="18">
+              <svg class="reting-stars${
+                roundedRating > 1 ? ' star-filled' : ''
+              }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
-              <svg class="reting-stars" width="18" height="18">
+              <svg class="reting-stars${
+                roundedRating > 2 ? ' star-filled' : ''
+              }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
-              <svg class="reting-stars" width="18" height="18">
+              <svg class="reting-stars${
+                roundedRating > 3 ? ' star-filled' : ''
+              }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
-              <svg class="reting-stars" width="18" height="18">
+              <svg class="reting-stars${
+                roundedRating > 4 ? ' star-filled' : ''
+              }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
             </div>
@@ -59,115 +77,138 @@ const {_id,title,instructions,thumb,time,youtube,tags,ingredients,rating} = reci
         </div>
   
         <div class="recipe-ingredients">
-          <ul class="ingredient">${renderIngridients(ingredients)}
+          <ul>${renderIngridients(ingredients)}
           </ul>
         </div>
   
         <div class="tags-modal">${renderTags(tags)}
         </div>
         <div class="instructions">
-          <p>${instructions}
+          <p>${renderInstruction(instructions)}
           </p>
         </div>
-      </div>
   
-      <button class="modal-button add" data-id="${_id}" type="button">Add to favorite</button>
+      <button class="modal-button-favorite  add" data-id="${_id}" type="button">Add to favorite</button>
   
-      <button class="modal-button" type="button">Give a rating</button>
-  
-      <button class="close-modal-recipe" type="button">
-        <svg class="close-modal-recipe-icon" width="20" height="20">
-          <use href="../img/icons.svg#x-modal"></use>
-        </svg>
-      </button>
-    </div>
-  </section> `
-};
-
-
-
-
-  let obj = {
-    "_id": "6462a8f74c3d0ddd28897fb8",
-    "title": "Mediterranean Pasta Salad",
-    "category": "Seafood",
-    "area": "Italian",
-    "instructions": "Bring a large saucepan of salted water to the boil\r\nAdd the pasta, stir once and cook for about 10 minutes or as directed on the packet.\r\nMeanwhile, wash the tomatoes and cut into quarters. Slice the olives. Wash the basil.\r\nPut the tomatoes into a salad bowl and tear the basil leaves over them. Add a tablespoon of olive oil and mix.\r\nWhen the pasta is ready, drain into a colander and run cold water over it to cool it quickly.\r\nToss the pasta into the salad bowl with the tomatoes and basil.\r\nAdd the sliced olives, drained mozzarella balls, and chunks of tuna. Mix well and let the salad rest for at least half an hour to allow the flavours to mingle.\r\nSprinkle the pasta with a generous grind of black pepper and drizzle with the remaining olive oil just before serving.",
-    "description": "A salad made with pasta, vegetables (such as tomatoes, cucumbers, and olives), feta cheese, and a dressing made with olive oil and lemon juice.",
-    "thumb": "https://www.themealdb.com/images/media/meals/wvqpwt1468339226.jpg",
-    "preview": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678560402/mwtf7uqrnsxvlpjqtslc.jpg",
-    "time": "27",
-    "youtube": "https://www.youtube.com/watch?v=e52IL8zYmaE",
-    "tags": [
-        "Pasta",
-        "Baking"
-    ],
-    "ingredients": [
-        {
-            "id": "640c2dd963a319ea671e3724",
-            "measure": "200 g",
-            "name": "Mozzarella Balls",
-            "desc": "Small, round balls of mozzarella cheese that are soft, smooth, and milky in flavor, and are often used as a topping for pizzas, salads, and pasta dishes.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564856/zbhre2hgosydezexwhky.png"
-        },
-        {
-            "id": "640c2dd963a319ea671e3663",
-            "measure": "250 g",
-            "name": "Baby Plum Tomatoes",
-            "desc": "The tomato is the edible, often red, berry of the plant Solanum lycopersicum, commonly known as a tomato plant. The species originated in western South America and Central America. The Nahuatl (Aztec language) word tomatl gave rise to the Spanish word tomate, from which the English word tomato derived.[3][4] Its domestication and use as a cultivated food may have originated with the indigenous peoples of Mexico. The Aztecs used tomatoes in their cooking at the time of the Spanish conquest of the Aztec Empire, and after the Spanish encountered the tomato for the first time after their contact with the Aztecs, they brought the plant to Europe. From there, the tomato was introduced to other parts of the European-colonized world during the 16th century.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564221/hh3a8lt3xeopaaumybd0.png"
-        },
-        {
-            "id": "640c2dd963a319ea671e36dd",
-            "measure": "1  bunch",
-            "name": "Fresh Basil",
-            "desc": "An aromatic herb with green leaves that are used in many cuisines around the world, particularly in Italian cuisine. It has a sweet, slightly peppery flavor and a strong, pleasant aroma.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564798/kc3bngtbfjx85mhk6p0i.png"
-        },
-        {
-            "id": "640c2dd963a319ea671e36cf",
-            "measure": "350 g",
-            "name": "Farfalle",
-            "desc": "A type of pasta shaped like a bow tie or butterfly.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564797/jgwujfs7lp8bvymction.png"
-        },
-        {
-            "id": "640c2dd963a319ea671e36cd",
-            "measure": "3  tablespoons",
-            "name": "Extra Virgin Olive Oil",
-            "desc": "A high-quality oil made from the first pressing of the olives, with a fruity flavor and low acidity. Often used in dressings and for finishing dishes.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564796/wornokeoy7lwi7soyymw.png"
-        },
-        {
-            "id": "640c2dd963a319ea671e36f3",
-            "measure": "40 g",
-            "name": "Green Olives",
-            "desc": "Olives that are harvested before they are fully ripe and have a firm texture and slightly bitter flavor commonly used in salads, sandwiches, and as a snack.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564798/wsc9q0gthn85ppthqizm.png"
-        },
-        {
-            "id": "640c2dd963a319ea671e3781",
-            "measure": "200 g",
-            "name": "Tuna",
-            "desc": "A saltwater fish with firm, meaty flesh, commonly used in a variety of cuisines, including sushi, salads, and sandwiches.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564914/eny2eswuvz2owcjskgyr.png"
-        },
-        {
-            "id": "640c2dd963a319ea671e375e",
-            "measure": "to taste",
-            "name": "Salt",
-            "desc": "Crystalline mineral made of sodium chloride, commonly used as a seasoning and preservative in cooking and food preparation.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564910/a1sigxrvvbfhsrozsshz.png"
-        },
-        {
-            "id": "640c2dd963a319ea671e373f",
-            "measure": "to taste",
-            "name": "Pepper",
-            "desc": "A spice made from ground dried peppercorns, commonly used in cooking and as a table seasoning for its pungent and spicy flavor.",
-            "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564854/qdnacuigdp7bquzjclub.png"
-        }
-    ],
-    "rating": 4.03,
-    "whoRated": 163
+      <button class="modal-button" type="button">Give a rating</button>`;
 }
-console.log(renderModalRecipe(obj))
+
+let obj = {
+  _id: '6462a8f74c3d0ddd28897fc2',
+  title: 'Fish pie',
+  category: 'Seafood',
+  area: 'British',
+  instructions:
+    '01.Put the potatoes in a large pan of cold salted water and bring to the boil. Lower the heat, cover, then simmer gently for 15 minutes until tender. Drain, then return to the pan over a low heat for 30 seconds to drive off any excess water. Mash with 1 tbsp olive oil, then season.\r\n02.Meanwhile put the milk in a large sauté pan, add the fish and bring to the boil. Remove from the heat, cover and stand for 3 minutes. Remove the fish (reserving the milk) and pat dry with kitchen paper, then gently flake into an ovenproof dish, discarding the skin and any bones.\r\n03.Heat the remaining oil in a pan, stir in the flour and cook for 30 seconds. Gradually stir in 200-250ml of the reserved milk (discard the rest). Grate in nutmeg, season, then bubble until thick. Stir in the cream.\r\n04.Preheat the oven to 190°C/fan170°C/gas 5. Grate the artichokes and add to the dish with the leek, prawns and herbs. Stir the lemon zest and juice into the sauce, then pour over. Mix gently with a wooden spoon.\r\n05.Spoon the mash onto the fish mixture, then use a fork to make peaks, which will crisp and brown as it cooks. Sprinkle over the cheese, then bake for 35-40 minutes until golden and bubbling. Serve with wilted greens.',
+  description:
+    'A traditional British dish made with flaky fish, creamy sauce, and mashed potatoes.',
+  thumb: 'https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg',
+  preview:
+    'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678560401/pakeiyrkttm00eb2lmia.jpg',
+  time: '75',
+  youtube: 'https://www.youtube.com/watch?v=2sX4fCgg-UI',
+  tags: ['Fish', 'Pie', 'Breakfast', 'Baking'],
+  ingredients: [
+    {
+      id: '640c2dd963a319ea671e36d9',
+      measure: '900g',
+      name: 'Floury Potatoes',
+      desc: 'A type of potato with a high starch content and dry, fluffy texture when cooked. Often used for making mashed potatoes, fries, and potato pancakes.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564797/zs8n71dpakckkhsw7dnc.png',
+    },
+    {
+      id: '640c2dd963a319ea671e372c',
+      measure: '2 tbsp',
+      name: 'Olive Oil',
+      desc: 'A type of oil made from pressing whole olives, commonly used in cooking and as a salad dressing.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564854/hzcfvlja7hmbp84z7f3q.png',
+    },
+    {
+      id: '640c2dd963a319ea671e3763',
+      measure: '600ml',
+      name: 'Semi-skimmed Milk',
+      desc: 'Semi-skimmed milk is a type of milk that has had some, but not all, of the cream removed. It typically has a lower fat content than whole milk, but is not as low in fat as skimmed milk.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564914/rzl1wep2ocmfgyikjgjv.png',
+    },
+    {
+      id: '640c2dd963a319ea671e3792',
+      measure: '800g',
+      name: 'White Fish Fillets',
+      desc: 'The boneless and skinless cuts of white fish used in cooking for their mild flavor and versatility.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564913/yhr3ej51zby0lvddil5r.png',
+    },
+    {
+      id: '640c2dd963a319ea671e3743',
+      measure: '1 tbsp',
+      name: 'Plain Flour',
+      desc: 'A finely ground flour made from wheat that is often used as a basic ingredient in many recipes, including cakes, breads, and pastries.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564855/rgbrzmkgwzap28petbza.png',
+    },
+    {
+      id: '640c2dd963a319ea671e372a',
+      measure: 'Grating',
+      name: 'Nutmeg',
+      desc: 'A spice that is made from the seed of the nutmeg tree, and is often used in cooking and baking for its warm, sweet, and spicy flavor.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564856/vmfojwsclufqosygks6i.png',
+    },
+    {
+      id: '640c2dd963a319ea671e36c3',
+      measure: '3 tbsp',
+      name: 'Double Cream',
+      desc: 'A type of cream that has a high fat content, typically around 48%. It is often used in desserts and sauces, as well as whipped for use as a topping.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564743/uq2rdez4471azswsbzyu.png',
+    },
+    {
+      id: '640c2dd963a319ea671e3706',
+      measure: '200g',
+      name: 'Jerusalem Artichokes',
+      desc: 'Also known as sunchokes, Jerusalem artichokes are a type of root vegetable that have a slightly sweet, nutty flavor and a crisp texture when raw.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564856/ppyhvetrcdcexkwcgaj3.png',
+    },
+    {
+      id: '640c2dd963a319ea671e3710',
+      measure: '1 finely sliced',
+      name: 'Leek',
+      desc: 'A type of allium vegetable that is related to onions and garlic. Leeks have a mild, sweet flavor and can be eaten raw or cooked in a variety of dishes.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564855/yremuumuwyvmelrjaban.png',
+    },
+    {
+      id: '640c2dd963a319ea671e3747',
+      measure: '200g peeled raw',
+      name: 'Prawns',
+      desc: 'A type of seafood that has a sweet and delicate flavor. They are often used in dishes such as curries, stir-fries, and salads.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564915/xwy1vs6kim0ofmimbnsh.png',
+    },
+    {
+      id: '640c2dd963a319ea671e3738',
+      measure: 'Large handful',
+      name: 'Parsley',
+      desc: 'A herb with a mild, slightly bitter flavor, commonly used in Mediterranean and Middle Eastern cooking as a garnish or seasoning.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564855/z91sebymmjai39blnnpq.png',
+    },
+    {
+      id: '640c2dd963a319ea671e36c1',
+      measure: 'Handful',
+      name: 'Dill',
+      desc: 'An aromatic herb that is commonly used in European and Mediterranean cuisines. It has a fresh, tangy flavor that pairs well with fish, vegetables, and dips.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564743/j9diim3cuaevpjlqt0ug.png',
+    },
+    {
+      id: '640c2dd963a319ea671e3711',
+      measure: 'Grated zest of 1',
+      name: 'Lemon',
+      desc: 'A citrus fruit that has a sour, acidic flavor and is often used in cooking and baking to add tartness and brightness to dishes. Lemon juice and zest are commonly used in marinades, dressings, and desserts.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564854/ytqywdf4mz40xhwmbymc.png',
+    },
+    {
+      id: '640c2dd963a319ea671e36f9',
+      measure: '25g grated',
+      name: 'Gruyère',
+      desc: 'Gruyère is a type of Swiss cheese that is known for its nutty, slightly sweet flavor and smooth, creamy texture. It is often used in cooking and pairs well with foods like potatoes, mushrooms, and bread.',
+      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564798/qwu9b62zrpnfwzqxr7tf.png',
+    },
+  ],
+  rating: 4.21,
+  whoRated: 40,
+};
+console.log(renderModalRecipe(obj));
