@@ -51,16 +51,21 @@
 
 .logo-header {
   text-align: center;
+  font-family: Inter;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
   line-height: 1.125;
   letter-spacing: -0.04em;
+  padding-top: 28px;
+  padding-bottom: 91px;
   color: var(--accent-color);
 }
 @media only screen and (min-width: 768px) {
   .logo {
     font-size: 18px;
-    padding-top: 28px;
-    padding-bottom: 50px;
+    line-height: 1.125;
+    padding-bottom: 93px;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -73,12 +78,13 @@
 }
 
 .nav-list {
-  display: flex;
-  gap: 16px;
+  display: none;
 }
-@media only screen and (max-width: 376px) {
+
+@media only screen and (min-width: 768px) {
   .nav-list {
-    display: none;
+    display: flex;
+    gap: 16px;
   }
 }
 
@@ -87,7 +93,9 @@
   display: flex;
   align-items: top;
 }
-
+.nav-link {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .nav-link.active {
   color: var(--accent-color);
 }
@@ -111,12 +119,12 @@
   gap: 14px;
 }
 
-@media only screen and (min-width: 376px) {
+/* @media only screen and (min-width: 376px) {
   .icon-container {
     margin: 0;
     gap: 18px;
   }
-}
+} */
 @media only screen and (min-width: 769px) {
   .icon-container {
     gap: 24px;
@@ -134,6 +142,7 @@
   border: none;
   outline: none;
   stroke: var(--primary-dark-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .shopping-cart:hover .cart-icon {
@@ -163,6 +172,7 @@
 
 .menu-icon {
   stroke: var(--primary-dark-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-icon:hover {
