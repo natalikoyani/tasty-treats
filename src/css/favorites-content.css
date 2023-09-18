@@ -4,7 +4,15 @@
   align-items: center;
   flex-direction: column;
 }
+.hero-img {
+  margin-bottom: 40px;
+}
 
+@media only screen and (min-width: 768px) {
+  .hero-img {
+    margin-bottom: 64px;
+  }
+}
 .hero-text-fav {
   color: #050505;
   text-align: center;
@@ -24,10 +32,14 @@
   max-width: 335px;
   margin: 0 auto;
   text-align: center;
+
+  min-height: 100vh;
 }
 @media only screen and (min-width: 768px) {
   .hero-mob-wrapper {
     gap: 32px;
+    min-height: 72px;
+    max-width: 481px;
   }
   .hero-text-fav {
     line-height: 1.5;
@@ -45,4 +57,81 @@
     width: 97px;
     height: 83px;
   }
+}
+
+.list-fav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =================== Rendering Cards Styles ================== */
+/* .recipe-card-favorites {
+  width: 335px;
+  height: 335px;
+} */
+@media only screen and (min-width: 768px) {
+  /* .recipe-card-favorites {
+    width: 224px;
+    height: 224px;
+  } */
+  .list-fav {
+    gap: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* .recipe-btn-favorites {
+  min-width: 89px;
+  height: 31px;
+  font-size: 12px;
+  padding: 8px 14px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .recipe-btn-favorites {
+    width: 93px;
+    height: 31px;
+    font-size: 12px;
+  }
+  .recipe-card-favorites {
+    width: 258px;
+    height: 287px;
+  }
+} */
+
+/* ==================== Categories buttons styles ========================*/
+.btn-all-categoris {
+  padding: 14px 18px;
+  min-width: 132px;
+  height: 46px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  color: rgba(5, 5, 5, 0.5);
+  border-radius: 15px;
+  background-color: var(--primary-light-color);
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  margin-bottom: 24px;
+
+  transition: all var(--transition-function);
+}
+/* Tablet 768+*/
+@media screen and (min-width: 768px) {
+  .btn-all-categoris {
+    min-width: 145px;
+    height: 48px;
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.btn-all-categoris:hover,
+.btn-all-categoris:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-light-color);
 }
