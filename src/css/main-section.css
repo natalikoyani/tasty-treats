@@ -28,6 +28,6 @@
 
 @media screen and (min-width: 1280px) {
     .main-box {
-        gap: 64px;
+        gap: 63px;
     }
 }
