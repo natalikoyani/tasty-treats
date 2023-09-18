@@ -1,7 +1,7 @@
 <!-- Search input будет находиться в этом файле (вместе с фильтрами, если успеем) -->
 <div class="right-part">
   <div class="user-interaction">
-    <div class="user-search-btn select-elements">
+    <div class="user-search-btn">
       <p class="desc-input">Search</p>
       <div class="search-elements">
         <input
@@ -17,29 +17,13 @@
         </button>
       </div>
     </div>
-    <div class="select-elements search-element-time">
-      <p class="desc-input">Time</p>
-      <select class="select-list" name="time">
-        <option value="default" class="selection-unit" selected>0 min</option>
-      </select>
-    </div>
-    <div class="select-elements search-element-area">
-      <p class="desc-input">Area</p>
-      <select class="select-list select-list-area" name="area">
-        <option value="default" class="selection-unit" selected>Region</option>
-      </select>
-    </div>
-    <div class="select-elements search-element-ingred">
-      <p class="desc-input">Ingredients</p>
-      <select class="select-list select-list-ingr" name="area">
-        <option value="default" class="selection-unit" selected>Product</option>
-      </select>
+    <div class="button-reset">
+      <button class="btn-reset" type="button">
+        <svg class="icon-reset" width="16px" height="16px">
+          <use href="./img/icons.svg#x-search"></use>
+        </svg>
+        Reset the filter
+      </button>
     </div>
   </div>
-  <!-- <div class="button-reset">
-    <button class="btn-reset" type="button">Reset the filter</button>
-    <svg class="icon-reset" width="16px" height="16px">
-      <use href="./img/icons.svg#x-search"></use>
-    </svg>
-  </div> -->
 </div>
