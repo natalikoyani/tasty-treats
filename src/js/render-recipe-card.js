@@ -6,7 +6,7 @@ export const renderRecipes = (recipes) => {
     return recipes
         .map(recipe => {
 
-            const { _id, title, description, thumb, rating } = recipe
+            const { _id, title, description, thumb, rating, category } = recipe
             let isFavorite = favorities.includes(_id)
             let roundedRating = Math.round(rating)
 
@@ -20,6 +20,7 @@ export const renderRecipes = (recipes) => {
         data-description="${ description }"
         data-thumb="${ thumb }"
         data-rating="${ rating }"
+        data-category="${ category }"
         >
             <use href="./img/icons.svg#heart"></use>
         </svg>
