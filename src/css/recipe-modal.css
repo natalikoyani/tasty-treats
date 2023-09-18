@@ -1,5 +1,7 @@
 .backdrop-recipe-info {
-  background-color: black;
+  background-color: var(--additional-light-color);
+
+  
 }
 .modal-recipe {
   position: relative;
