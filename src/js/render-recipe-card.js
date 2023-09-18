@@ -8,10 +8,6 @@ export const renderRecipes = recipes => {
 
   return recipes
     .map(recipe => {
-      const { _id, title, description, thumb, rating } = recipe;
-      let isFavorite = favorities.includes(_id);
-      let roundedRating = Math.round(rating);
-
       const { _id, title, description, thumb, rating, category } = recipe;
       let isFavorite = favorities.includes(_id);
       let roundedRating = Math.round(rating);

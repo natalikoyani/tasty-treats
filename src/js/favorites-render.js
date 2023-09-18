@@ -8,10 +8,10 @@ const favList = document.querySelector('.js-list-fav');
 const div = document.querySelector('.js-fav-wrapper');
 const image = document.querySelector('.js-hero-img');
 
-// const recipeBtnFav = document.querySelector('.recipe-btn');
-// const recipeCardFav = document.querySelector('.recipe-card');
+const recipeBtnFav = document.querySelector('.recipe-btn');
+const recipeCardFav = document.querySelector('.recipe-card');
 
-// ====== Adaptive
+// ====== Adaptive ======
 
 window.addEventListener('resize', showImg);
 
@@ -28,8 +28,6 @@ function showImg() {
 let currentLocalStorage = localStorage.getItem('favoriteRecipes');
 let recipeList = currentLocalStorage ? JSON.parse(currentLocalStorage) : [];
 recipeList = Array.isArray(recipeList) ? recipeList : [];
-// const favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) ?? [];
-console.log(recipeList);
 
 // Основна ф-ція малювання карток з localStorage
 
@@ -78,9 +76,9 @@ function categories(categories) {
     .join('');
   const all_categoriesBtnMarkup = () => {
     if (setCategories.length) {
-      return `<button class="btn-all-categoris  active_all-categories" type="button">All categories</button>${categoriesMarkup}`;
+      return `<button class="btn-all-categories  active-category-fav" type="button">All categories</button>${categoriesMarkup}`;
     } else {
-      return '';
+      return (categoriesConteiner.innerHTML = '');
     }
   };
   categoriesConteiner.innerHTML = all_categoriesBtnMarkup();
@@ -98,35 +96,49 @@ categories(categoriesArray);
 //   creatModal(recipe);
 // }
 
+// фільтрування по категоріям
+
+// const categoryButtons = document.querySelectorAll('.fav-category-fltr-btn');
+// const allCategoriesBtn = document.querySelector('.btn-all-categories');
+
+// categoryButtons.forEach(button => {
+//   button.addEventListener('click', () => {
+//     const selectedCategory = button.id;
+//     displayRecipesByCategory(selectedCategory);
+//   });
+// });
+
+// function displayRecipesByCategory(category) {
+//   const filterRecipes = recipeList.filter(
+//     recipe => recipe.category === category
+//   );
+//   favList.innerHTML = renderRecipes(filterRecipes);
+//   allCategoriesBtn.addEventListener('click', handlerAllCategories);
+// }
+
+// function handlerAllCategories(e) {
+//   favList.innerHTML = renderRecipes(recipeList);
+// }
+
 // Видалення картки по кліку по сердцю
 
-// const btnHeart = document.querySelector('.heart-svg');
+// const btnHearts = document.querySelectorAll('.heart-filled');
 
-// btnHeart.addEventListener('click', handlerRemoveFavRecipe);
+// btnHearts.forEach(heart => {
+//   heart.addEventListener('click', removeCard);
+// });
 
-// function handlerRemoveFavRecipe(e) {
-//   // localStorage.removeItem();
+// function removeCard(e) {
+//   const card = e.target.closest('.recipe-card');
+//   let recipeId = e.currentTarget.dataset._id;
+//   let indexOfRecipe = recipeList.findIndex(recipe => recipe._id === recipeId);
+//   console.dir(card);
 
-//   if (e.target.tagName !== 'BUTTON') {
-//     return;
-//   }
-
-//   if (e.target.classList.contains('heart-filled')) {
-//     e.target.classList.remove('heart-filled');
-//     e.target.classList.add('heart-svg');
-//     const recipeId = e.target.id;
-
-//     // Видаляємо рецепт з масиву favoritesRecipes
-
-//     const recipeIndex = recipeList.findIndex(recipe => recipe._id === recipeId);
-//     // console.log(recipeIndex);
-//     recipeList.splice(recipeIndex, 1);
-//     // localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoritesRecipes));
-
-//     // categories(
-//     //   favoritesRecipes.map(recipe => {
-//     //     return recipe.category;
-//     //   })
-//     // );
+//   if (indexOfRecipe !== -1) {
+//     card.remove();
+//     recipeList.splice(indexOfRecipe, 1);
+//     localStorage.setItem('favoriteRecipes', JSON.stringify(recipeList));
 //   }
 // }
+
+// ===========
