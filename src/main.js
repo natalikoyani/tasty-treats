@@ -5,13 +5,14 @@ import { Notify } from 'notiflix';
 import SlimSelect from 'slim-select';
 import debounce from 'lodash.debounce';
 
+import './js/hamburger-menu';
 import { renderGallery } from './js/render-card-gallery.js';
 import {
-    onCategoryClick,
-    handlerInput,
-    onAllCategoriesClick,
-    handlerReset,
-   } from './js/search';
+  onCategoryClick,
+  handlerInput,
+  onAllCategoriesClick,
+  handlerReset,
+} from './js/search';
 
 import './js/hero.js';
 import './js/fillCategories';
