@@ -5,6 +5,7 @@ import { Notify } from 'notiflix';
 
 const cardGallery = document.querySelector('.cards-gallery');
 const searchInput = document.querySelector('.search-input');
+const allCategoriesBtn = document.querySelector('.all-categories-button');
 
 let previousRecipes = [];
 let activeButton = null;
@@ -13,6 +14,8 @@ export function onCategoryClick(event) {
   const clickedButton = event.target;
 
   if (clickedButton.className === 'name-category') {
+    allCategoriesBtn.classList.remove('active-category');
+
     clearPreviousData();
     searchByCategory(clickedButton);
   }
@@ -80,6 +83,7 @@ export function onAllCategoriesClick() {
   if (activeButton !== null) {
     activeButton.classList.remove('active-category');
     activeButton = null;
+    allCategoriesBtn.classList.add('active-category');
   }
   searchPerform('');
 }

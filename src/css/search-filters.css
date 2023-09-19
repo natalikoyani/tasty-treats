@@ -17,6 +17,9 @@
   }
 }
 .search-input {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
   width: 335px;
   border-radius: 15px;
   border: 1px solid rgba(5, 5, 5, 0.2);
@@ -45,7 +48,9 @@
 @media screen and (min-width: 768px) {
   .search-input {
     width: 278px;
+    line-height: 1.25;
     min-height: 48px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -78,8 +83,7 @@
 }
 
 .icon-reset {
-  fill: rgba(155, 181, 55, 1);
-  color: rgba(155, 181, 55, 1);
+  stroke: var(--accent-color);
 }
 
 .btn-reset {
@@ -92,4 +96,7 @@
   border: none;
   display: flex;
   margin-left: auto;
+}
+.main-right-part {
+  width: 100%;
 }

@@ -5,6 +5,7 @@ import { Notify } from 'notiflix';
 import SlimSelect from 'slim-select';
 import debounce from 'lodash.debounce';
 
+import './js/hamburger-menu';
 import { renderGallery } from './js/render-card-gallery.js';
 import {
   onCategoryClick,
@@ -16,6 +17,7 @@ import {
 import './js/hero.js';
 import './js/fillCategories';
 import './js/popular-recipes.js';
+import './js/open-recipe-modal.js';
 
 renderGallery();
 const categories = document.querySelector('.categories-list');
