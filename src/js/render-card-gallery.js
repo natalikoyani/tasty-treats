@@ -3,7 +3,6 @@ import { renderRecipes } from './render-recipe-card';
 import { addHeartsEventListener } from './hearts-listener';
 import { addRecipeButton } from './open-recipe-modal';
 
-import { addHeartsEventListener } from './hearts-listener';
 const cardGallery = document.querySelector('.cards-gallery');
 const allCategoriesBtn = document.querySelector('.all-categories-button');
 
