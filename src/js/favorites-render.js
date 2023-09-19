@@ -1,5 +1,5 @@
 import { renderRecipes } from './render-recipe-card';
-
+import { addRecipeButton } from './open-recipe-modal';
 // ===============================================
 
 // import {findRecipe} from - це для модалки у ф-ції handlerClick
@@ -40,7 +40,7 @@ function creatMarkupFavorite(arr, list) {
 
     image.classList.remove('visually-hidden');
     favList.innerHTML = markup;
-
+    // addRecipeButton('.recipe-btn');
     // recipeCardFav.classList.add('recipe-card-favorites');
     // recipeBtnFav.classList.add('recipe-btn-favorites');
   } else {
