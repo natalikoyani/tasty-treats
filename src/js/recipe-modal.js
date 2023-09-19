@@ -26,7 +26,7 @@ export function renderModalRecipe(recipe) {
             src="${renderVideo(youtube)}"
             title="YouTube video player"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
           <img
@@ -93,122 +93,68 @@ export function renderModalRecipe(recipe) {
       <button class="modal-button" type="button">Give a rating</button>`;
 }
 
-let obj = {
-  _id: '6462a8f74c3d0ddd28897fc2',
-  title: 'Fish pie',
-  category: 'Seafood',
-  area: 'British',
-  instructions:
-    '01.Put the potatoes in a large pan of cold salted water and bring to the boil. Lower the heat, cover, then simmer gently for 15 minutes until tender. Drain, then return to the pan over a low heat for 30 seconds to drive off any excess water. Mash with 1 tbsp olive oil, then season.\r\n02.Meanwhile put the milk in a large sauté pan, add the fish and bring to the boil. Remove from the heat, cover and stand for 3 minutes. Remove the fish (reserving the milk) and pat dry with kitchen paper, then gently flake into an ovenproof dish, discarding the skin and any bones.\r\n03.Heat the remaining oil in a pan, stir in the flour and cook for 30 seconds. Gradually stir in 200-250ml of the reserved milk (discard the rest). Grate in nutmeg, season, then bubble until thick. Stir in the cream.\r\n04.Preheat the oven to 190°C/fan170°C/gas 5. Grate the artichokes and add to the dish with the leek, prawns and herbs. Stir the lemon zest and juice into the sauce, then pour over. Mix gently with a wooden spoon.\r\n05.Spoon the mash onto the fish mixture, then use a fork to make peaks, which will crisp and brown as it cooks. Sprinkle over the cheese, then bake for 35-40 minutes until golden and bubbling. Serve with wilted greens.',
-  description:
-    'A traditional British dish made with flaky fish, creamy sauce, and mashed potatoes.',
-  thumb: 'https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg',
-  preview:
-    'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678560401/pakeiyrkttm00eb2lmia.jpg',
-  time: '75',
-  youtube: 'https://www.youtube.com/watch?v=2sX4fCgg-UI',
-  tags: ['Fish', 'Pie', 'Breakfast', 'Baking'],
-  ingredients: [
-    {
-      id: '640c2dd963a319ea671e36d9',
-      measure: '900g',
-      name: 'Floury Potatoes',
-      desc: 'A type of potato with a high starch content and dry, fluffy texture when cooked. Often used for making mashed potatoes, fries, and potato pancakes.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564797/zs8n71dpakckkhsw7dnc.png',
-    },
-    {
-      id: '640c2dd963a319ea671e372c',
-      measure: '2 tbsp',
-      name: 'Olive Oil',
-      desc: 'A type of oil made from pressing whole olives, commonly used in cooking and as a salad dressing.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564854/hzcfvlja7hmbp84z7f3q.png',
-    },
-    {
-      id: '640c2dd963a319ea671e3763',
-      measure: '600ml',
-      name: 'Semi-skimmed Milk',
-      desc: 'Semi-skimmed milk is a type of milk that has had some, but not all, of the cream removed. It typically has a lower fat content than whole milk, but is not as low in fat as skimmed milk.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564914/rzl1wep2ocmfgyikjgjv.png',
-    },
-    {
-      id: '640c2dd963a319ea671e3792',
-      measure: '800g',
-      name: 'White Fish Fillets',
-      desc: 'The boneless and skinless cuts of white fish used in cooking for their mild flavor and versatility.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564913/yhr3ej51zby0lvddil5r.png',
-    },
-    {
-      id: '640c2dd963a319ea671e3743',
-      measure: '1 tbsp',
-      name: 'Plain Flour',
-      desc: 'A finely ground flour made from wheat that is often used as a basic ingredient in many recipes, including cakes, breads, and pastries.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564855/rgbrzmkgwzap28petbza.png',
-    },
-    {
-      id: '640c2dd963a319ea671e372a',
-      measure: 'Grating',
-      name: 'Nutmeg',
-      desc: 'A spice that is made from the seed of the nutmeg tree, and is often used in cooking and baking for its warm, sweet, and spicy flavor.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564856/vmfojwsclufqosygks6i.png',
-    },
-    {
-      id: '640c2dd963a319ea671e36c3',
-      measure: '3 tbsp',
-      name: 'Double Cream',
-      desc: 'A type of cream that has a high fat content, typically around 48%. It is often used in desserts and sauces, as well as whipped for use as a topping.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564743/uq2rdez4471azswsbzyu.png',
-    },
-    {
-      id: '640c2dd963a319ea671e3706',
-      measure: '200g',
-      name: 'Jerusalem Artichokes',
-      desc: 'Also known as sunchokes, Jerusalem artichokes are a type of root vegetable that have a slightly sweet, nutty flavor and a crisp texture when raw.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564856/ppyhvetrcdcexkwcgaj3.png',
-    },
-    {
-      id: '640c2dd963a319ea671e3710',
-      measure: '1 finely sliced',
-      name: 'Leek',
-      desc: 'A type of allium vegetable that is related to onions and garlic. Leeks have a mild, sweet flavor and can be eaten raw or cooked in a variety of dishes.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564855/yremuumuwyvmelrjaban.png',
-    },
-    {
-      id: '640c2dd963a319ea671e3747',
-      measure: '200g peeled raw',
-      name: 'Prawns',
-      desc: 'A type of seafood that has a sweet and delicate flavor. They are often used in dishes such as curries, stir-fries, and salads.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564915/xwy1vs6kim0ofmimbnsh.png',
-    },
-    {
-      id: '640c2dd963a319ea671e3738',
-      measure: 'Large handful',
-      name: 'Parsley',
-      desc: 'A herb with a mild, slightly bitter flavor, commonly used in Mediterranean and Middle Eastern cooking as a garnish or seasoning.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564855/z91sebymmjai39blnnpq.png',
-    },
-    {
-      id: '640c2dd963a319ea671e36c1',
-      measure: 'Handful',
-      name: 'Dill',
-      desc: 'An aromatic herb that is commonly used in European and Mediterranean cuisines. It has a fresh, tangy flavor that pairs well with fish, vegetables, and dips.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564743/j9diim3cuaevpjlqt0ug.png',
-    },
-    {
-      id: '640c2dd963a319ea671e3711',
-      measure: 'Grated zest of 1',
-      name: 'Lemon',
-      desc: 'A citrus fruit that has a sour, acidic flavor and is often used in cooking and baking to add tartness and brightness to dishes. Lemon juice and zest are commonly used in marinades, dressings, and desserts.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564854/ytqywdf4mz40xhwmbymc.png',
-    },
-    {
-      id: '640c2dd963a319ea671e36f9',
-      measure: '25g grated',
-      name: 'Gruyère',
-      desc: 'Gruyère is a type of Swiss cheese that is known for its nutty, slightly sweet flavor and smooth, creamy texture. It is often used in cooking and pairs well with foods like potatoes, mushrooms, and bread.',
-      img: 'https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564798/qwu9b62zrpnfwzqxr7tf.png',
-    },
-  ],
-  rating: 4.21,
-  whoRated: 40,
-};
-console.log(renderModalRecipe(obj));
+// let obj = {
+//   "_id": "6462a8f74c3d0ddd28897fc1",
+//   "title": "Chocolate Gateau",
+//   "category": "Dessert",
+//   "area": "French",
+//   "instructions": "Preheat the oven to 180°C/350°F/Gas Mark 4. Grease and line the base of an 8 in round spring form cake tin with baking parchment\r\nBreak the chocolate into a heatproof bowl and place over a saucepan of gently simmering water and stir until it melts. (or melt in the microwave for 2-3 mins stirring occasionally)\r\nPlace the butter and sugar in a mixing bowl and cream together with a wooden spoon until light and fluffy. Gradually beat in the eggs, adding a little flour if the mixture begins to curdle. Fold in the remaining flour with the cooled, melted chocolate and milk. Mix until smooth.\r\nSpread the mixture into the cake tin and bake for 50-55 mins or until firm in the centre and a skewer comes out cleanly. Cool for 10 minutes, then turn out and cool completely.",
+//   "description": "A French dessert consisting of layers of chocolate sponge cake and chocolate ganache, typically topped with chocolate glaze and chocolate decorations.",
+//   "thumb": "https://www.themealdb.com/images/media/meals/tqtywx1468317395.jpg",
+//   "preview": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678560403/zyahxajhkglf8sisiqlh.jpg",
+//   "time": "75",
+//   "youtube": "https://www.youtube.com/watch?v=dsJtgmAhFF4",
+//   "tags": [
+//       "Cake",
+//       "Chocolate",
+//       "Desert",
+//       "Pudding"
+//   ],
+//   "ingredients": [
+//       {
+//           "id": "640c2dd963a319ea671e3742",
+//           "measure": "250g",
+//           "name": "Plain Chocolate",
+//           "desc": "Plain chocolate, also known as dark chocolate, is made from cocoa solids, sugar, and cocoa butter. It has a higher percentage of cocoa solids than milk chocolate, and has a bittersweet taste. It is often used in baking, or enjoyed on its own as a treat.",
+//           "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564854/qmuma4viupigb574izg6.png"
+//       },
+//       {
+//           "id": "640c2dd963a319ea671e367e",
+//           "measure": "175g",
+//           "name": "Butter",
+//           "desc": "A dairy product made from churning cream or milk, with a high fat content and a creamy, rich flavor that is often used in cooking and baking.",
+//           "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564674/ovea5weymaecrnbwxuq9.png"
+//       },
+//       {
+//           "id": "640c2dd963a319ea671e371f",
+//           "measure": "2 tablespoons",
+//           "name": "Milk",
+//           "desc": "A white liquid produced by mammals as food for their young, commonly used as a drink or ingredient in cooking and baking.",
+//           "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564854/ly0kwisb5ripennlkqma.png"
+//       },
+//       {
+//           "id": "640c2dd963a319ea671e36ca",
+//           "measure": "5",
+//           "name": "Eggs",
+//           "desc": "A reproductive cell laid by female animals, often used in baking and cooking as a binding agent or to add texture and flavor",
+//           "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564742/iaphxkd4vqyfn7xixnqw.png"
+//       },
+//       {
+//           "id": "640c2dd963a319ea671e36ee",
+//           "measure": "175g",
+//           "name": "Granulated Sugar",
+//           "desc": "A common sweetener made from sugar cane or sugar beet that has been refined and granulated.",
+//           "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564797/gywjatzz1ourjbtpjjtw.png"
+//       },
+//       {
+//           "id": "640c2dd963a319ea671e36d7",
+//           "measure": "125g",
+//           "name": "Flour",
+//           "desc": "A fine powder made from grinding grains, nuts, seeds, or roots. Used as a main ingredient in baking, cooking, and thickening sauces and soups.",
+//           "img": "https://res.cloudinary.com/ddbvbv5sp/image/upload/v1678564797/hwex2zzwxbv7a5gi9iuh.png"
+//       }
+//   ],
+//   "rating": 4.18,
+//   "whoRated": 195
+// };
+// console.log(renderModalRecipe(obj));

@@ -1,23 +1,35 @@
 import { getRecipeById } from './api';
 import { renderModalRecipe } from './recipe-modal';
 
-const modalrecipe = document.querySelector('.js-modal-recipe');
-// createModalRecipe();
+const modalrecipe = document.querySelector('.js-create-modal');
+const modalConteiner = document.querySelector('.js-modal-recipe');
 
-// async function createModalRecipe(id) {
-//   await getRecipeById().then(
-//     data => (modalrecipe.innerHTML = renderModalRecipe(data))
-//   );
-// }
+
+export function addRecipeButton(classname){
+  let btns = document.querySelectorAll(classname);
+  btns.forEach(btn => {
+    btn.addEventListener('click', async (event)=> { 
+      let recipeId = event.target.dataset._id;
+      let objRecipe = await getRecipeById(recipeId);
+      let renderRecipe = renderModalRecipe(objRecipe);
+      modalrecipe.innerHTML = renderRecipe;
+      modalConteiner.classList.remove("visually-hidden");
+   
+     }
+     )
+  }) 
+}
+
+
 
 const refs = {
-    // openModalBtn: document.querySelector("[data-modal-open]"),
+    
     closeModalBtn: document.querySelector("[data-modal-close]"),
     modal: document.querySelector("[data-modal]"),
   };
-//   refs.openModalBtn.addEventListener("click", toggleModal);
+
   refs.closeModalBtn.addEventListener("click", toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle("visually-hidden");
+    refs.modal.classList.add("visually-hidden");
   }
