@@ -33,7 +33,7 @@
 
 .menu-close-btn {
   fill: transparent;
-  stroke: var(--white-color);
+  stroke: var(--primary-light-color);
 }
 
 .mobile-menu {
@@ -50,10 +50,10 @@
   justify-content: flex-start;
 }
 
-.mobile-link {
+/* .mobile-link {
   display: block;
   padding: 0px;
-}
+} */
 
 .mobile-link {
   font-family: Inter;
@@ -62,6 +62,7 @@
   line-height: normal;
 
   display: flex;
+  justify-content: center;
   align-items: center;
   color: var(--additional-light-color);
 }
