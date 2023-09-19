@@ -83,7 +83,7 @@
 }
 
 .icon-reset {
-  fill: var(--accent-color);
+  stroke: var(--accent-color);
 }
 
 .btn-reset {
