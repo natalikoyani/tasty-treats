@@ -10,15 +10,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team_10/assets/favorites-95fadb95.js"></script>
-    <link rel="modulepreload" crossorigin href="/Team_10/assets/render-recipe-card-435a06f7.js">
-    <link rel="stylesheet" href="/Team_10/assets/render-recipe-card-9c352321.css">
+    <script type="module" crossorigin src="/Team_10/assets/favorites-c01cb5cd.js"></script>
+    <link rel="modulepreload" crossorigin href="/Team_10/assets/hamburger-menu-38d5171e.js">
+    <link rel="stylesheet" href="/Team_10/assets/hamburger-menu-9c352321.css">
   </head>
   <body>
     <!-- Временная ссылка на Homepage -->
     <a href="./index.html">Home</a>
     <!-- ---------------------------- -->
-
     <section class="header">
   <div class="container header-container">
     <nav class="header-nav">
@@ -134,6 +133,29 @@
     <ul class="js-list-fav list-fav"></ul>
   </div>
 </section>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+  <button class="menu-toggle js-close-menu">
+    <svg class="menu-close-btn" width="32" height="32">
+      <use href="../img/icons.svg#x-mobile-menu"></use>
+    </svg>
+  </button>
+
+  <ul class="mobile-menu list">
+    <li class="mobile-menu-item">
+      <a href="../index.html" class="mobile-link">Home</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a href="../favorites.html" class="mobile-link">Favorites</a>
+    </li>
+  </ul>
+
+  <a class="link switch-theme" href="#">
+    <svg class="switch-icon" width="46" height="20">
+      <use href="../img/icons.svg#switch-grey" width="46" height="20"></use>
+    </svg>
+  </a>
+</div>
 
     <!-- <script type="module" src="/src/main.js"></script> -->
     
