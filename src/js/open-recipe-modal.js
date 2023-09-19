@@ -13,6 +13,13 @@ export function addRecipeButton(classname) {
       let renderRecipe = renderModalRecipe(objRecipe);
       modalrecipe.innerHTML = renderRecipe;
       modalConteiner.classList.remove('visually-hidden');
+      const ifr = document.querySelector('iframe');
+      ifr.onload = () => {
+        console.dir(ifr);
+      }
+      ifr.onerror = () => {
+        console.log('not loaded');
+      }
     });
   });
 }
