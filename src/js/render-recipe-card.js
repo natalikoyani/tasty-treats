@@ -56,7 +56,7 @@ export const renderRecipes = (recipes) => {
                     </svg>
                 </li>
             </ul>
-            <button class="recipe-btn" type="button">See recipe</button>
+            <button class="recipe-btn" type="button" data-_id="${ _id }">See recipe</button>
         </div>
     </div>`
 

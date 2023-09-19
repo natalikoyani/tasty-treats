@@ -17,6 +17,7 @@ import {
 import './js/hero.js';
 import './js/fillCategories';
 import './js/popular-recipes.js';
+import './js/open-recipe-modal.js';
 
 const categories = document.querySelector('.categories-list');
 const searchInput = document.querySelector('.search-input');
