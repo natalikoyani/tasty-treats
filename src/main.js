@@ -19,12 +19,11 @@ import './js/fillCategories';
 import './js/popular-recipes.js';
 import './js/open-recipe-modal.js';
 
+renderGallery();
 const categories = document.querySelector('.categories-list');
 const searchInput = document.querySelector('.search-input');
 const allCategoriesBtn = document.querySelector('.all-categories-button');
 const btnReset = document.querySelector('.btn-reset');
-
-renderGallery();
 
 allCategoriesBtn.addEventListener('click', onAllCategoriesClick);
 categories.addEventListener('click', onCategoryClick);
