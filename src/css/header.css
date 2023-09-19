@@ -10,13 +10,19 @@
   width: 100%;
   z-index: 3;
   padding-top: 28px;
-  margin-bottom: 50px;
+  margin-bottom: 91.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    margin-bottom: 93px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
   .header {
     padding-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
   }
 }
 /* Basic */
