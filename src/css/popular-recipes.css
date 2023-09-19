@@ -40,14 +40,14 @@
   cursor: pointer;
 }
 
-.popular-recipe-item:hover,
+/* .popular-recipe-item:hover,
 .popular-recipe-item:focus {
   background: var(--accent-color);
   border-color: var(--accent-color);
   border-radius: 8px;
   color: var(--additional-light-color);
   transition: all 0.4s ease 0s;
-}
+} */
 
 .popular-recipe-card {
   display: flex;
