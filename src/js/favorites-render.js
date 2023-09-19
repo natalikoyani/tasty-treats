@@ -1,4 +1,4 @@
-import { renderRecipes } from './render-recipe-card';
+import { renderRecipes } from './render-fav-card';
 
 // ===============================================
 
