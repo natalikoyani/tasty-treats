@@ -1,4 +1,4 @@
-import{a as m}from"./hamburger-menu-da4458f7.js";const y=e=>e.map(s=>{const{_id:t,title:r,description:a,thumb:n,rating:l}=s;let o=Math.round(l);return`<div class="fav-card"
+import{a as m}from"./hamburger-menu-d45b423b.js";const y=e=>e.map(s=>{const{_id:t,title:r,description:a,thumb:n,rating:l}=s;let o=Math.round(l);return`<div class="fav-card"
     style="background: linear-gradient(1deg, rgba(5, 5, 5, 0.60) 4.82%, rgba(5, 5, 5, 0.00) 108.72%), url(${n}), lightgray -29.5px 0px / 125.194% 112.544% no-repeat; background-size:cover;"
     >
 
