@@ -44,7 +44,7 @@ function creatMarkupFavorite(arr, list) {
     // recipeCardFav.classList.add('recipe-card-favorites');
     // recipeBtnFav.classList.add('recipe-btn-favorites');
   } else {
-    markupEmpty = `<div class="hero-mob-wrapper">
+    markupEmpty = `<li class="hero-mob-wrapper">
             <svg class="hero-fav-svg">
             <use href="./img/icons.svg#hat"></use>
           </svg>
@@ -53,7 +53,7 @@ function creatMarkupFavorite(arr, list) {
               To get started, you can add recipes that you like to your favorites
               for easier access in the future.
             </p>
-          </div>`;
+          </li>`;
     return div.insertAdjacentHTML('beforeend', markupEmpty);
   }
 }

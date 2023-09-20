@@ -3,6 +3,7 @@ import { renderModalRecipe } from './recipe-modal';
 import { changeFavoriteButton } from './change-favorite-modal-button';
 import { resetIframe } from './iframe-reset';
 import { addRemoveFavorite } from './add-remove-favorite';
+import { findRecipeCart } from './find-recipe-cart';
 
 const modalrecipe = document.querySelector('.js-create-modal');
 const modalConteiner = document.querySelector('.js-modal-recipe');
@@ -19,7 +20,12 @@ export async function addRecipeButton(event) {
   modalFavBtn.addEventListener('click', event => {
     addRemoveFavorite(event);
     changeFavoriteButton('.modal-button-favorite');
-  })
+    let cart = findRecipeCart('.cards-gallery', event.target.dataset._id);
+    let svg = Array(...cart.children).find(child => child.nodeName == 'svg');
+    svg.classList.toggle('heart-filled');
+    let cartFav = findRecipeCart('.js-list-fav', event.target.dataset._id);
+  });
+
 }
 
 // export function addRecipeButton(classname) {
