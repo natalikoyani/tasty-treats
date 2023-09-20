@@ -128,6 +128,10 @@
         width: 224px;
         height: 244px;
     }
+
+    .recipe-rating {
+        width: 72px;
+    }
 }
 
 @media screen and (min-width: 1280px) {
