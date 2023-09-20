@@ -1,16 +1,15 @@
 import { renderRecipes } from './render-fav-card';
 
-// ===============================================
-
 const favList = document.querySelector('.js-list-fav');
-const div = document.querySelector('.js-fav-wrapper');
+const divFavWrapper = document.querySelector('.js-fav-wrapper');
 const image = document.querySelector('.js-hero-img');
 
 let currentLocalStorage = localStorage.getItem('favoriteRecipes');
 let recipeList = currentLocalStorage ? JSON.parse(currentLocalStorage) : [];
 recipeList = Array.isArray(recipeList) ? recipeList : [];
+export { recipeList };
 
-// ====== Adaptive ======
+// ======== Adaptive =========
 
 window.addEventListener('resize', showImg);
 
@@ -26,7 +25,7 @@ function showImg() {
 
 // Основна ф-ція малювання карток з localStorage
 
-function creatMarkupFavorite(arr, list) {
+export function creatMarkupFavorite(arr) {
   let markup;
   let markupEmpty;
 
@@ -45,20 +44,20 @@ function creatMarkupFavorite(arr, list) {
               for easier access in the future.
             </p>
           </div>`;
-    return div.insertAdjacentHTML('beforeend', markupEmpty);
+    return divFavWrapper.insertAdjacentHTML('beforeend', markupEmpty);
   }
 }
 creatMarkupFavorite(recipeList);
 
 // Відмалювання категорій
 
-const categoriesConteiner = document.querySelector('.js-categories-container');
+const categoriesContainer = document.querySelector('.js-categories-container');
 
 const categoriesArray = recipeList.map(recipe => {
   return recipe.category;
 });
 
-function categories(categories) {
+export function categories(categories) {
   const setCategories = [...new Set(categories)];
   const categoriesMarkup = setCategories
     .map(name => {
@@ -67,12 +66,12 @@ function categories(categories) {
     .join('');
   const all_categoriesBtnMarkup = () => {
     if (setCategories.length) {
-      return `<button class="btn-all-categories  active-category-fav" type="button">All categories</button>${categoriesMarkup}`;
+      return `<button class="fav-category-fltr-btn  active-category-fav" id="all" type="button">All categories</button>${categoriesMarkup}`;
     } else {
-      return (categoriesConteiner.innerHTML = '');
+      return (categoriesContainer.innerHTML = '');
     }
   };
-  categoriesConteiner.innerHTML = all_categoriesBtnMarkup();
+  categoriesContainer.innerHTML = all_categoriesBtnMarkup();
 }
 
 categories(categoriesArray);

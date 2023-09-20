@@ -1,28 +1,43 @@
 // Видалення картки по кліку по сердцю
+
 import { addRecipeButton } from './open-recipe-modal';
+import { categories, recipeList } from './favorites-render';
+import { creatMarkupFavorite } from './favorites-render';
+import { renderRecipes } from './render-fav-card';
 
-let currentLocalStorage = localStorage.getItem('favoriteRecipes');
-let recipeList = currentLocalStorage ? JSON.parse(currentLocalStorage) : [];
-recipeList = Array.isArray(recipeList) ? recipeList : [];
+const favListCards = document.querySelector('.js-list-fav');
 
-const favList = document.querySelector('.js-list-fav');
+favListCards.addEventListener('click', onCard);
 
-favList.addEventListener('click', removeCard);
-
-function refreshPage() {
-  location.reload();
-}
-function removeCard(e) {
+function onCard(e) {
+  const favList = document.querySelector('.js-list-fav');
   if (e.target.closest('svg')?.nodeName == 'svg') {
-    const card = e.target.closest('.fav-card');
     const svg = e.target.closest('svg');
     let recipeId = svg.dataset._id;
     let indexOfRecipe = recipeList.findIndex(recipe => recipe._id === recipeId);
+    let categoryBeforeDelete = [
+      ...new Set(recipeList.map(recipe => recipe.category)),
+    ];
 
     if (indexOfRecipe !== -1) {
-      card.remove();
       recipeList.splice(indexOfRecipe, 1);
+
+      if (recipeList.length > 0) {
+        favList.innerHTML = renderRecipes(recipeList);
+      } else {
+        favList.innerHTML = '';
+        creatMarkupFavorite(recipeList);
+      }
       localStorage.setItem('favoriteRecipes', JSON.stringify(recipeList));
+      let uniqueCategory = [
+        ...new Set(recipeList.map(recipe => recipe.category)),
+      ];
+      let deletedCategory = categoryBeforeDelete.filter(
+        caterogy => !uniqueCategory.includes(caterogy)
+      );
+      if (deletedCategory.length) {
+        categories(uniqueCategory);
+      }
     }
   }
 

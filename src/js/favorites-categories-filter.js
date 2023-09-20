@@ -1,23 +1,29 @@
-// Фільтрування по категоріям
+// Фільтрування рецептів по категоріям
 
 import { renderRecipes } from './render-fav-card';
+import { recipeList } from './favorites-render';
 
 const favList = document.querySelector('.js-list-fav');
 
-let currentLocalStorage = localStorage.getItem('favoriteRecipes');
-let recipeList = currentLocalStorage ? JSON.parse(currentLocalStorage) : [];
-recipeList = Array.isArray(recipeList) ? recipeList : [];
+const categoryList = document.querySelector('.js-categories-container');
 
-const categoryButtons = document.querySelectorAll('.fav-category-fltr-btn');
-const allCategoriesBtn = document.querySelector('.btn-all-categories');
+categoryList.addEventListener('click', e => {
+  const categoryButtons = document.querySelectorAll('.fav-category-fltr-btn');
+  if (e.target.nodeName === 'BUTTON') {
+    categoryButtons.forEach(data =>
+      data.classList.remove('active-category-fav')
+    );
+    e.target.classList.toggle('active-category-fav');
 
-categoryButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const selectedCategory = button.id;
-    displayRecipesByCategory(selectedCategory);
-
-    allCategoriesBtn.classList.remove('active-category-fav');
-  });
+    if (e.target.id !== 'all') {
+      displayRecipesByCategory(e.target.id);
+    } else {
+      let currentLocalStorage = localStorage.getItem('favoriteRecipes');
+      let recipeList = currentLocalStorage
+        ? JSON.parse(currentLocalStorage)
+        : [];
+    }
+  }
 });
 
 function displayRecipesByCategory(category) {
@@ -25,11 +31,4 @@ function displayRecipesByCategory(category) {
     recipe => recipe.category === category
   );
   favList.innerHTML = renderRecipes(filterRecipes);
-}
-
-allCategoriesBtn.addEventListener('click', handlerAllCategories);
-
-function handlerAllCategories(e) {
-  favList.innerHTML = renderRecipes(recipeList);
-  allCategoriesBtn.classList.add('active-category-fav');
 }
