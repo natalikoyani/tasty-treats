@@ -29,10 +29,16 @@ export async function addRecipeButton(event) {
 const refs = {
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modal: document.querySelector('[data-modal]'),
+  modalСontainer: document.querySelector('[data-modal-modal-container]'),
 };
 
-refs.modal.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
+refs.modal.addEventListener('click', toggleModal);
+refs.modalСontainer.addEventListener('click', modalClickHandler);
+
+function modalClickHandler(event) {
+  event.stopPropagation();
+}
 
 function toggleModal() {
   refs.modal.classList.add('visually-hidden');
