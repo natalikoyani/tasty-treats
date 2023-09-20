@@ -128,3 +128,7 @@
 .active-category {
   color: var(--accent-color);
 }
+.active-all-categories-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-light-color);
+}
