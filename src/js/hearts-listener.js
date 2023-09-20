@@ -1,9 +1,10 @@
-export const addHeartsEventListener = () => {
-  const cardHearts = document.querySelectorAll('.recipe-card .heart-svg');
+import { addRecipeButton } from './open-recipe-modal';
 
-  const addToFavorities = event => {
-    let dataset = event.currentTarget.dataset;
+export const addToFavorities = event => {
 
+  if (event.target.nodeName === 'svg' || event.target.nodeName === 'use') {
+    let closest = event.target.closest('svg');
+    let dataset = event.target.closest('.recipe-card').dataset;
     // get + check localStorage
     let currentLocalStorage = localStorage.getItem('favoriteRecipes');
     let recipeList = currentLocalStorage ? JSON.parse(currentLocalStorage) : [];
@@ -13,7 +14,7 @@ export const addHeartsEventListener = () => {
     let recipeId = dataset?._id;
     let indexOfRecipe = recipeList.findIndex(recipe => recipe._id === recipeId);
 
-    event.currentTarget.classList.toggle('heart-filled');
+    closest.classList.toggle('heart-filled');
 
     if (indexOfRecipe < 0) {
       // add recipe to list
@@ -24,7 +25,9 @@ export const addHeartsEventListener = () => {
       recipeList.splice(indexOfRecipe, 1);
       localStorage.setItem('favoriteRecipes', JSON.stringify(recipeList));
     }
-  };
+  }
 
-  cardHearts.forEach(c => c.addEventListener('click', addToFavorities));
-};
+  if (event.target.nodeName === 'BUTTON') { 
+    addRecipeButton(event)
+  }
+}
