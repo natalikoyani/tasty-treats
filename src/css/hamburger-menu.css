@@ -50,6 +50,10 @@
   justify-content: flex-start;
 }
 
+.switch-icon-hamburger {
+  transform: scale(1.58) translateY(-2px);
+}
+
 /* .mobile-link {
   display: block;
   padding: 0px;
