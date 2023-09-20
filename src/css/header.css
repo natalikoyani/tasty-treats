@@ -158,8 +158,10 @@
   }
 }
 
-@media only screen and (min-width: 376px) {
+/* @media only screen and (min-width: 376px) { */
   .switch-icon {
+    width: 46px;
+    height: 20px;
     display: flex;
     gap: 14px;
     align-items: center;
@@ -171,7 +173,7 @@
     outline: none;
     filter: drop-shadow(3px 3px 4px var(--switcher-shadow-color));
   }
-}
+/* } */
 
 @media not(hover: hover) {
   menu-icon.active {
