@@ -91,9 +91,7 @@ export function renderModalRecipe(recipe) {
         data-description="${description}"
         data-thumb="${thumb}"
         data-rating="${rating}"
-        data-category="${category}" type="button">Add to favorite</button>
-  
-      <button class="modal-button" type="button">Give a rating</button>`;
+        data-category="${category}" type="button">Add to favorite</button>`;
 }
 
 // let obj = {
