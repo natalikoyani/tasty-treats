@@ -5,7 +5,7 @@ import{c as me,a as ot,g as ke,n as dt,b as ct,d as ft,e as ut,o as pt}from"./ha
         data-thumb="${o}"
         data-rating="${n}"
         data-category="${u}"
-        style="background: linear-gradient(1deg, rgba(5, 5, 5, 0.60) 4.82%, rgba(5, 5, 5, 0.00) 108.72%), url(${o}), lightgray -29.5px 0px / 125.194% 112.544% no-repeat;"
+        style="background: linear-gradient(1deg, rgba(5, 5, 5, 0.60) 4.82%, rgba(5, 5, 5, 0.00) 108.72%), url(${o}), lightgray -29.5px 0px / 125.194% 112.544% no-repeat; background-size:cover;"
         >
 
         <svg class="heart-svg${d>0?" heart-filled":""}">
