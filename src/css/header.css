@@ -146,14 +146,16 @@
 .menu-icon:hover {
   stroke: var(--accent-color);
 }
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
 }
 
-.switch-icon {
-  display: none;
+@media only screen and (max-width: 767.5px) {
+  .switch-theme {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 376px) {
@@ -167,7 +169,7 @@
     cursor: pointer;
     border: none;
     outline: none;
-    filter: drop-shadow(5px 5px 2px var(--switcher-shadow-color));
+    filter: drop-shadow(3px 3px 4px var(--switcher-shadow-color));
   }
 }
 
