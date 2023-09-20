@@ -48,6 +48,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .logo-header {
+    font-size: 18px;
+  }
+
   .logo {
     font-size: 18px;
     line-height: 1.125;
@@ -160,6 +164,7 @@
 
 /* @media only screen and (min-width: 376px) { */
   .switch-icon {
+    transform: scale(1.58) translateY(-2px);
     width: 46px;
     height: 20px;
     display: flex;

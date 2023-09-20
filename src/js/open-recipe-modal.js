@@ -1,5 +1,8 @@
 import { getRecipeById } from './api';
 import { renderModalRecipe } from './recipe-modal';
+import { changeFavoriteButton } from './change-favorite-modal-button';
+import { resetIframe } from './iframe-reset';
+import { addRemoveFavorite } from './add-remove-favorite';
 
 const modalrecipe = document.querySelector('.js-create-modal');
 const modalConteiner = document.querySelector('.js-modal-recipe');
@@ -11,6 +14,12 @@ export async function addRecipeButton(event) {
   modalrecipe.innerHTML = renderRecipe;
   modalConteiner.classList.remove('visually-hidden');
   document.body.style.overflow = 'hidden';
+  changeFavoriteButton('.modal-button-favorite');
+  let modalFavBtn = document.querySelector('.modal-button-favorite');
+  modalFavBtn.addEventListener('click', event => {
+    addRemoveFavorite(event);
+    changeFavoriteButton('.modal-button-favorite');
+  })
 }
 
 // export function addRecipeButton(classname) {
@@ -29,14 +38,21 @@ export async function addRecipeButton(event) {
 const refs = {
   closeModalBtn: document.querySelector('[data-modal-close]'),
   modal: document.querySelector('[data-modal]'),
+  modalСontainer: document.querySelector('[data-modal-modal-container]'),
 };
 
-refs.modal.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
+refs.modal.addEventListener('click', toggleModal);
+refs.modalСontainer.addEventListener('click', modalClickHandler);
+
+function modalClickHandler(event) {
+  event.stopPropagation();
+}
 
 function toggleModal() {
   refs.modal.classList.add('visually-hidden');
   document.body.style.overflow = 'auto';
+  resetIframe('.video-recipe');
 }
 
 document.addEventListener('keydown', function (event) {
