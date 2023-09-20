@@ -1,4 +1,4 @@
-import"./hamburger-menu-91b18b1d.js";const Ei=t=>{const e=localStorage.getItem("favoriteRecipes")?JSON.parse(localStorage.getItem("favoriteRecipes")):[],i=Array.isArray(e)?e.map(n=>n._id):[];return t.map(n=>{const{_id:s,title:a,description:r,thumb:c,rating:o,category:d}=n;let f=i.includes(s),l=Math.round(o);return`<div class="recipe-card"
+import"./hamburger-menu-f43f1200.js";const Ei=t=>{const e=localStorage.getItem("favoriteRecipes")?JSON.parse(localStorage.getItem("favoriteRecipes")):[],i=Array.isArray(e)?e.map(n=>n._id):[];return t.map(n=>{const{_id:s,title:a,description:r,thumb:c,rating:o,category:d}=n;let f=i.includes(s),l=Math.round(o);return`<div class="recipe-card"
             style="background: linear-gradient(1deg, rgba(5, 5, 5, 0.60) 4.82%, rgba(5, 5, 5, 0.00) 108.72%), url(${c}), lightgray -29.5px 0px / 125.194% 112.544% no-repeat;"
             >
 
