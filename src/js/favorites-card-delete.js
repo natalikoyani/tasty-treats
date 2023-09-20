@@ -11,7 +11,7 @@ btnHearts.forEach(heart => {
 });
 
 function removeCard(e) {
-  const card = e.target.closest('.recipe-card');
+  const card = e.target.closest('.fav-card');
   let recipeId = e.currentTarget.dataset._id;
   let indexOfRecipe = recipeList.findIndex(recipe => recipe._id === recipeId);
 
