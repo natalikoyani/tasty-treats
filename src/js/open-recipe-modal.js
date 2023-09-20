@@ -10,6 +10,7 @@ export async function addRecipeButton(event) {
   let renderRecipe = renderModalRecipe(objRecipe);
   modalrecipe.innerHTML = renderRecipe;
   modalConteiner.classList.remove('visually-hidden');
+  document.body.style.overflow = 'hidden';
 }
 
 // export function addRecipeButton(classname) {
@@ -30,11 +31,19 @@ const refs = {
   modal: document.querySelector('[data-modal]'),
 };
 
+refs.modal.addEventListener('click', toggleModal);
 refs.closeModalBtn.addEventListener('click', toggleModal);
 
 function toggleModal() {
   refs.modal.classList.add('visually-hidden');
+  document.body.style.overflow = 'auto';
 }
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    toggleModal();
+  }
+});
 
 export async function openModelById(recipeId) {
   let objRecipe = await getRecipeById(recipeId);
