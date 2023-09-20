@@ -50,7 +50,8 @@
 }
 
 .rating-number {
-    margin-right: 4px;
+    width: 22px;
+    margin-right: 8px;
     display: flex;
     font-size: 14px;
     font-weight: 500;
