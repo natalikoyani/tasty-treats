@@ -2,7 +2,7 @@ function createRecipeMarkup(recipe) {
   return `<li
       class="popular-recipe-item"
     >
-      <button class="popular-recipe-card js-card-button" aria-label="popular recipe${recipe.title}" data-id="${recipe._id}">
+      <button class="popular-recipe-card js-card-button" aria-label="popular recipe" data-title="${recipe.title}" data-id="${recipe._id}">
         <img
           class="popular-card-image"
           src="${recipe.preview}"
