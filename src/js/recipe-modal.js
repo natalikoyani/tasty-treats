@@ -14,6 +14,8 @@ export function renderModalRecipe(recipe) {
     tags,
     ingredients,
     rating,
+    description,
+    category,
   } = recipe;
   let roundedRating = Math.round(rating);
 
@@ -46,29 +48,24 @@ export function renderModalRecipe(recipe) {
           <div class="modal-rating">
             <p class="number-reting">${rating}</p>
             <div>
-              <svg class="reting-stars${
-                roundedRating > 0 ? ' star-filled' : ''
-              }" width="18" height="18">
+              <svg class="reting-stars${roundedRating > 0 ? ' star-filled' : ''
+    }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
-              <svg class="reting-stars${
-                roundedRating > 1 ? ' star-filled' : ''
-              }" width="18" height="18">
+              <svg class="reting-stars${roundedRating > 1 ? ' star-filled' : ''
+    }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
-              <svg class="reting-stars${
-                roundedRating > 2 ? ' star-filled' : ''
-              }" width="18" height="18">
+              <svg class="reting-stars${roundedRating > 2 ? ' star-filled' : ''
+    }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
-              <svg class="reting-stars${
-                roundedRating > 3 ? ' star-filled' : ''
-              }" width="18" height="18">
+              <svg class="reting-stars${roundedRating > 3 ? ' star-filled' : ''
+    }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
-              <svg class="reting-stars${
-                roundedRating > 4 ? ' star-filled' : ''
-              }" width="18" height="18">
+              <svg class="reting-stars${roundedRating > 4 ? ' star-filled' : ''
+    }" width="18" height="18">
                 <use href="../img/icons.svg#star"></use>
               </svg>
             </div>
@@ -88,7 +85,13 @@ export function renderModalRecipe(recipe) {
           </p>
         </div>
   
-      <button class="modal-button-favorite  add" data-id="${_id}" type="button">Add to favorite</button>
+      <button class="modal-button-favorite  add"
+        data-_id="${_id}"
+        data-title="${title}"
+        data-description="${description}"
+        data-thumb="${thumb}"
+        data-rating="${rating}"
+        data-category="${category}" type="button">Add to favorite</button>
   
       <button class="modal-button" type="button">Give a rating</button>`;
 }
