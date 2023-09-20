@@ -19,7 +19,7 @@ export const renderRecipes = recipes => {
         data-thumb="${thumb}"
         data-rating="${rating}"
         data-category="${category}"
-        style="background: linear-gradient(1deg, rgba(5, 5, 5, 0.60) 4.82%, rgba(5, 5, 5, 0.00) 108.72%), url(${thumb}), lightgray -29.5px 0px / 125.194% 112.544% no-repeat;"
+        style="background: linear-gradient(1deg, rgba(5, 5, 5, 0.60) 4.82%, rgba(5, 5, 5, 0.00) 108.72%), url(${thumb}), lightgray -29.5px 0px / 125.194% 112.544% no-repeat; background-size:cover;"
         >
 
         <svg class="heart-svg${isFavorite > 0 ? ' heart-filled' : ''}">
