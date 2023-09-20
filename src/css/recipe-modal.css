@@ -155,7 +155,10 @@
 .add {
   margin-right: 5px;
 }
-
+.favorite{
+ background-color: coral;
+ border-color: coral;
+}
 .close-modal-recipe {
   position: absolute;
   top: 14px;
