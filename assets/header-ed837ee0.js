@@ -87,19 +87,19 @@ Notiflix needs to be appended to the "<`+r+'>" element, but you called it before
             <p class="number-reting">${m}</p>
             <div>
               <svg class="reting-stars${O>0?" star-filled":""}" width="18" height="18">
-                <use href="../img/icons.svg#star"></use>
+                <use href="./img/icons.svg#star"></use>
               </svg>
               <svg class="reting-stars${O>1?" star-filled":""}" width="18" height="18">
-                <use href="../img/icons.svg#star"></use>
+                <use href="./img/icons.svg#star"></use>
               </svg>
               <svg class="reting-stars${O>2?" star-filled":""}" width="18" height="18">
-                <use href="../img/icons.svg#star"></use>
+                <use href="./img/icons.svg#star"></use>
               </svg>
               <svg class="reting-stars${O>3?" star-filled":""}" width="18" height="18">
-                <use href="../img/icons.svg#star"></use>
+                <use href="./img/icons.svg#star"></use>
               </svg>
               <svg class="reting-stars${O>4?" star-filled":""}" width="18" height="18">
-                <use href="../img/icons.svg#star"></use>
+                <use href="./img/icons.svg#star"></use>
               </svg>
             </div>
             <p class="time-cook">${a}min</p>
