@@ -44,8 +44,7 @@ export function creatMarkupFavorite(arr) {
               for easier access in the future.
             </p>
           </li>`;
-    return div.insertAdjacentHTML('beforeend', markupEmpty);
-
+    return divFavWrapper.insertAdjacentHTML('beforeend', markupEmpty);
   }
 }
 creatMarkupFavorite(recipeList);
