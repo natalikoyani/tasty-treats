@@ -16,4 +16,4 @@ let loaderMarkup = `
      </div>
 `
 
-document.body.insertAdjacentHTML('beforeend', loaderMarkup)
+document.body.insertAdjacentHTML('beforeend', loaderMarkup);

@@ -1,7 +1,6 @@
 import { getRecipes } from './api';
 import { renderRecipes } from './render-recipe-card';
 import { addToFavorities } from './hearts-listener';
-import _ from 'lodash';
 
 const cardGallery = document.querySelector('.cards-gallery');
 const allCategoriesBtn = document.querySelector('.all-categories-button');
