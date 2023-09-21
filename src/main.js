@@ -18,6 +18,8 @@ import './js/hero.js';
 import './js/fillCategories';
 import './js/popular-recipes.js';
 import './js/open-recipe-modal.js';
+import './js/scroll-fetching.js';
+import './js/loader.js'
 
 renderGallery();
 const categories = document.querySelector('.categories-list');
