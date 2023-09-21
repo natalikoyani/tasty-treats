@@ -18,14 +18,22 @@ import './js/hero.js';
 import './js/fillCategories';
 import './js/popular-recipes.js';
 import './js/open-recipe-modal.js';
+import './js/scroll-fetching.js';
+import './js/loader.js';
+import './js/scroll-up-button';
 
 renderGallery();
 const categories = document.querySelector('.categories-list');
 const searchInput = document.querySelector('.search-input');
 const allCategoriesBtn = document.querySelector('.all-categories-button');
 const btnReset = document.querySelector('.btn-reset');
+const scrollUpBtn = document.querySelector('.scroll-up-btn');
 
 allCategoriesBtn.addEventListener('click', onAllCategoriesClick);
 categories.addEventListener('click', onCategoryClick);
 searchInput.addEventListener('input', debounce(handlerInput, 300));
 btnReset.addEventListener('click', handlerReset);
+scrollUpBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  scrollUpBtn.classList.add('visually-hidden');
+})
