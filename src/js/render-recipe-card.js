@@ -1,18 +1,18 @@
 export const renderRecipes = recipes => {
-  const lsFavorities = localStorage.getItem('favoriteRecipes')
-    ? JSON.parse(localStorage.getItem('favoriteRecipes'))
-    : [];
-  const favorities = Array.isArray(lsFavorities)
-    ? lsFavorities.map(recipe => recipe._id)
-    : [];
+    const lsFavorities = localStorage.getItem('favoriteRecipes')
+        ? JSON.parse(localStorage.getItem('favoriteRecipes'))
+        : [];
+    const favorities = Array.isArray(lsFavorities)
+        ? lsFavorities.map(recipe => recipe._id)
+        : [];
 
-  return recipes
-    .map(recipe => {
-      const { _id, title, description, thumb, rating, category } = recipe;
-      let isFavorite = favorities.includes(_id);
-      let roundedRating = Math.round(rating);
+    return recipes
+        .map(recipe => {
+            const { _id, title, description, thumb, rating, category } = recipe;
+            let isFavorite = favorities.includes(_id);
+            let roundedRating = Math.round(rating);
 
-      return `<li class="recipe-card"
+            return `<li class="recipe-card"
         data-_id="${_id}"
         data-title="${title}"
         data-description="${description}"
@@ -33,31 +33,31 @@ export const renderRecipes = recipes => {
             <ul class="recipe-rating">
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 0 ? ' star-filled' : ''
-        }">
+                }">
                         <use href="./img/icons.svg#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 1 ? ' star-filled' : ''
-        }">
+                }">
                         <use href="./img/icons.svg#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 2 ? ' star-filled' : ''
-        }">
+                }">
                         <use href="./img/icons.svg#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 3 ? ' star-filled' : ''
-        }">
+                }">
                         <use href="./img/icons.svg#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 4 ? ' star-filled' : ''
-        }">
+                }">
                         <use href="./img/icons.svg#star"></use>
                     </svg>
                 </li>
@@ -65,6 +65,6 @@ export const renderRecipes = recipes => {
             <button class="recipe-btn" type="button" data-_id="${_id}">See recipe</button>
         </div>
     </li>`;
-    })
-    .join('');
+        })
+        .join('');
 };

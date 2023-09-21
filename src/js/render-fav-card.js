@@ -2,10 +2,16 @@ export const renderRecipes = (recipes) => {
 
     return recipes.map(recipe => {
 
-        const { _id, title, description, thumb, rating } = recipe
+        const { _id, title, description, thumb, rating, category } = recipe
         let roundedRating = Math.round(rating)
 
-        return `<li class="fav-card"
+        return `<li class="fav-card" 
+        data-_id="${_id}"
+        data-title="${title}"
+        data-description="${description}"
+        data-thumb="${thumb}"
+        data-rating="${rating}"
+        data-category="${category}"
     style="background: linear-gradient(1deg, rgba(5, 5, 5, 0.60) 4.82%, rgba(5, 5, 5, 0.00) 108.72%), url(${thumb}), lightgray -29.5px 0px / 125.194% 112.544% no-repeat; background-size:cover;"
     >
 
