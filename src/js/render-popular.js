@@ -21,8 +21,7 @@ function createRecipeMarkup(recipe) {
 function createMarkupPopularRecipes(recipes) {
   return `<ul class="popular-recipe-list list">
       ${recipes.reduce(
-        (accumulator, recipe, index) =>
-          accumulator + createRecipeMarkup(recipe, index + 1),
+        (accumulator, recipe) => accumulator + createRecipeMarkup(recipe),
         ''
       )}
     </ul>`;
