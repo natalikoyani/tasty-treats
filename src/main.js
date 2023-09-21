@@ -1,8 +1,8 @@
-import axios from 'axios';
-import Swiper from 'swiper';
+// import axios from 'axios';
+// import Swiper from 'swiper';
 import 'swiper/css';
-import { Notify } from 'notiflix';
-import SlimSelect from 'slim-select';
+// import { Notify } from 'notiflix';
+// import SlimSelect from 'slim-select';
 import debounce from 'lodash.debounce';
 
 import './js/hamburger-menu';
@@ -13,7 +13,7 @@ import {
   onAllCategoriesClick,
   handlerReset,
 } from './js/search';
-
+import './js/header';
 import './js/hero.js';
 import './js/fillCategories';
 import './js/popular-recipes.js';
