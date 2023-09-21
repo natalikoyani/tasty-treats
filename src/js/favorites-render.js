@@ -44,7 +44,6 @@ export function creatMarkupFavorite(arr) {
               for easier access in the future.
             </p>
           </li>`;
-    image.classList.add('visually-hidden');
     return divFavWrapper.insertAdjacentHTML('beforeend', markupEmpty);
   }
 }
