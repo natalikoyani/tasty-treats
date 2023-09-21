@@ -66,41 +66,13 @@
   margin-bottom: 80px;
 }
 
-/* =================== Rendering Cards Styles ================== */
-/* .recipe-card-favorites {
-  width: 335px;
-  height: 335px;
-} */
 @media only screen and (min-width: 768px) {
-  /* .recipe-card-favorites {
-    width: 224px;
-    height: 224px;
-  } */
   .list-fav {
     gap: 16px;
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
-
-/* .recipe-btn-favorites {
-  min-width: 89px;
-  height: 31px;
-  font-size: 12px;
-  padding: 8px 14px;
-}
-
-@media only screen and (min-width: 1280px) {
-  .recipe-btn-favorites {
-    width: 93px;
-    height: 31px;
-    font-size: 12px;
-  }
-  .recipe-card-favorites {
-    width: 258px;
-    height: 287px;
-  }
-} */
 
 /* ==================== Categories buttons styles ========================*/
 .btn-all-categories {
@@ -119,6 +91,7 @@
 
   transition: all var(--transition-function);
 }
+
 /* Tablet 768+*/
 @media screen and (min-width: 768px) {
   .btn-all-categories {
