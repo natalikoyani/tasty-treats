@@ -9,7 +9,7 @@ import{c as $t,a as hg,g as Ui,n as Eo,b as mg,d as gg,e as vg,o as wg}from"./he
         >
 
         <svg class="heart-svg${m>0?" heart-filled":""}">
-            <use href="img/icons.svg#heart"></use>
+            <use href="/img/icons.svg#heart"></use>
         </svg>
 
         <h3 class="recipe-title">${o}</h3>
@@ -19,27 +19,27 @@ import{c as $t,a as hg,g as Ui,n as Eo,b as mg,d as gg,e as vg,o as wg}from"./he
             <ul class="recipe-rating">
                 <li class="rating-item">
                     <svg class="star-svg${d>0?" star-filled":""}">
-                        <use href="img/icons.svg#star"></use>
+                        <use href="/img/icons.svg#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${d>1?" star-filled":""}">
-                        <use href="img/icons.svg#star"></use>
+                        <use href="/img/icons.svg#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${d>2?" star-filled":""}">
-                        <use href="img/icons.svg#star"></use>
+                        <use href="/img/icons.svg#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${d>3?" star-filled":""}">
-                        <use href="img/icons.svg#star"></use>
+                        <use href="/img/icons.svg#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${d>4?" star-filled":""}">
-                        <use href="img/icons.svg#star"></use>
+                        <use href="/img/icons.svg#star"></use>
                     </svg>
                 </li>
             </ul>
