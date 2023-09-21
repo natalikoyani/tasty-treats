@@ -33,7 +33,9 @@ export async function addRecipeButton(event) {
       let storageData = getLocalStorageFavRecipes();
       let filter = document.querySelector('.active-category-fav');
       if (filter) {
-        storageData = storageData.filter(recipe => recipe.category === filter.dataset.category)
+        if (filter.id !== 'all') {
+          storageData = storageData.filter(recipe => recipe.category === filter.dataset.category);
+        }
       }
       let renderFavRecipes = renderRecipes(storageData);
       gallaryFav.innerHTML = renderFavRecipes;
