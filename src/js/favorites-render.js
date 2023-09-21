@@ -44,6 +44,7 @@ export function creatMarkupFavorite(arr) {
               for easier access in the future.
             </p>
           </li>`;
+    image.classList.add('visually-hidden');
     return divFavWrapper.insertAdjacentHTML('beforeend', markupEmpty);
   }
 }
@@ -61,12 +62,12 @@ export function categories(categories) {
   const setCategories = [...new Set(categories)];
   const categoriesMarkup = setCategories
     .map(name => {
-      return `<button class="fav-category-fltr-btn" id='${name}' type="button" data-category="${name}">${name}</button>`;
+      return `<button class="fav-category-fltr-btn " id='${name}' type="button" data-category="${name}">${name}</button>`;
     })
     .join('');
   const all_categoriesBtnMarkup = () => {
     if (setCategories.length) {
-      return `<button class="fav-category-fltr-btn  active-category-fav" id="all" type="button">All categories</button>${categoriesMarkup}`;
+      return `<button class="fav-category-fltr-btn btn-all-categories active-category-fav" id="all" type="button">All categories</button>${categoriesMarkup}`;
     } else {
       return (categoriesContainer.innerHTML = '');
     }

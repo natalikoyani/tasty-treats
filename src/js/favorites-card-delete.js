@@ -23,7 +23,11 @@ function onCard(e) {
       recipeList.splice(indexOfRecipe, 1);
 
       if (recipeList.length > 0) {
-        favList.innerHTML = renderRecipes(recipeList);
+        let category = document.querySelector('.active-category-fav')?.id;
+        let recipeListFiltered = recipeList.filter(
+          recipe => category === 'all' || recipe.category === category
+        );
+        favList.innerHTML = renderRecipes(recipeListFiltered);
       } else {
         favList.innerHTML = '';
         creatMarkupFavorite(recipeList);
@@ -37,6 +41,7 @@ function onCard(e) {
       );
       if (deletedCategory.length) {
         categories(uniqueCategory);
+        favList.innerHTML = renderRecipes(recipeList);
       }
     }
   }
