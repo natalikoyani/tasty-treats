@@ -2,6 +2,7 @@
 
 import { renderRecipes } from './render-fav-card';
 import { recipeList } from './favorites-render';
+import { creatMarkupFavorite } from './favorites-render';
 
 const favList = document.querySelector('.js-list-fav');
 
@@ -22,6 +23,7 @@ categoryList.addEventListener('click', e => {
       let recipeList = currentLocalStorage
         ? JSON.parse(currentLocalStorage)
         : [];
+      creatMarkupFavorite(recipeList);
     }
   }
 });
