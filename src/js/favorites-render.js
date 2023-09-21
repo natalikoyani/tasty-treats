@@ -34,7 +34,7 @@ export function creatMarkupFavorite(arr) {
     image.classList.remove('visually-hidden');
     favList.innerHTML = markup;
   } else {
-    markupEmpty = `<div class="hero-mob-wrapper">
+    markupEmpty = `<li class="hero-mob-wrapper">
             <svg class="hero-fav-svg">
             <use href="./img/icons.svg#hat"></use>
           </svg>
@@ -43,8 +43,9 @@ export function creatMarkupFavorite(arr) {
               To get started, you can add recipes that you like to your favorites
               for easier access in the future.
             </p>
-          </div>`;
-    return divFavWrapper.insertAdjacentHTML('beforeend', markupEmpty);
+          </li>`;
+    return div.insertAdjacentHTML('beforeend', markupEmpty);
+
   }
 }
 creatMarkupFavorite(recipeList);

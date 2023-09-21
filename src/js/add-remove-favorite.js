@@ -1,3 +1,5 @@
+import { localStorageFindIndex } from "./localstorage-find-index";
+
 export function addRemoveFavorite(e) {
      let obj = e.target.dataset;
      let currentLocalStorage = localStorage.getItem('favoriteRecipes');
@@ -6,7 +8,7 @@ export function addRemoveFavorite(e) {
 
      // check if recipe already in Favorites
      let recipeId = obj?._id;
-     let indexOfRecipe = recipeList.findIndex(recipe => recipe._id === recipeId);
+     let indexOfRecipe = localStorageFindIndex(recipeId)
 
      if (indexOfRecipe < 0) {
           // add recipe to list
