@@ -13,7 +13,7 @@ import {
   onAllCategoriesClick,
   handlerReset,
 } from './js/search';
-
+import './js/header';
 import './js/hero.js';
 import './js/fillCategories';
 import './js/popular-recipes.js';
