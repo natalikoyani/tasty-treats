@@ -1,10 +1,5 @@
-import axios from 'axios';
-import { Notify } from 'notiflix';
 import { getPopularRecipes } from './api';
-import {
-  createRecipeMarkup,
-  createMarkupPopularRecipes,
-} from './render-popular';
+import { createMarkupPopularRecipes } from './render-popular';
 import { openModelById } from './open-recipe-modal';
 
 const popularRecipesContainer = document.querySelector('.popular-recipes-card');
@@ -22,6 +17,7 @@ async function updatePopularRecipes() {
     popularRecipesContainer.addEventListener('click', event => {
       if (event.target.nodeName === 'BUTTON') {
         openModelById(event.target.dataset.id);
+        console.log(event.target.dataset.id);
       }
     });
   });

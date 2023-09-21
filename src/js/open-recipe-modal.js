@@ -34,14 +34,15 @@ export async function addRecipeButton(event) {
       let filter = document.querySelector('.active-category-fav');
       if (filter) {
         if (filter.id !== 'all') {
-          storageData = storageData.filter(recipe => recipe.category === filter.dataset.category);
+          storageData = storageData.filter(
+            recipe => recipe.category === filter.dataset.category
+          );
         }
       }
       let renderFavRecipes = renderRecipes(storageData);
       gallaryFav.innerHTML = renderFavRecipes;
     }
   });
-
 }
 
 // export function addRecipeButton(classname) {
@@ -87,5 +88,10 @@ export async function openModelById(recipeId) {
   let objRecipe = await getRecipeById(recipeId);
   let renderRecipe = renderModalRecipe(objRecipe);
   modalrecipe.innerHTML = renderRecipe;
+  let modalFavBtn = document.querySelector('.modal-button-favorite'); // get modal Favorite Button
+  modalFavBtn.addEventListener('click', event => {
+    addRemoveFavorite(event); // add/remove reciepe to/from localstorage
+    changeFavoriteButton('.modal-button-favorite');
+  });
   modalConteiner.classList.remove('visually-hidden');
 }
