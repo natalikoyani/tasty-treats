@@ -1,6 +1,6 @@
-import{r as n,a as S}from"./header-e78ec857.js";const T=document.querySelector(".js-list-fav"),b=document.querySelector(".js-fav-wrapper"),l=document.querySelector(".js-hero-img");let u=localStorage.getItem("favoriteRecipes"),t=u?JSON.parse(u):[];t=Array.isArray(t)?t:[];window.addEventListener("resize",y);y();function y(){window.innerWidth<768&&l.classList.add("visually-hidden"),window.innerWidth>=768&&l.classList.remove("visually-hidden")}function d(e){let a,r;if(e.length)a=n(t),l.classList.remove("visually-hidden"),T.innerHTML=a;else return r=`<li class="hero-mob-wrapper">
+import{r as n,a as S}from"./header-0980bd10.js";const T=document.querySelector(".js-list-fav"),b=document.querySelector(".js-fav-wrapper"),l=document.querySelector(".js-hero-img");let u=localStorage.getItem("favoriteRecipes"),t=u?JSON.parse(u):[];t=Array.isArray(t)?t:[];window.addEventListener("resize",y);y();function y(){window.innerWidth<768&&l.classList.add("visually-hidden"),window.innerWidth>=768&&l.classList.remove("visually-hidden")}function d(e){let a,r;if(e.length)a=n(t),l.classList.remove("visually-hidden"),T.innerHTML=a;else return r=`<li class="hero-mob-wrapper">
             <svg class="hero-fav-svg">
-            <use href="./img/icons.svg#hat"></use>
+            <use href="${svgIcons}#hat"></use>
           </svg>
             <p class="hero-text-fav">
               It appears that you haven't added any recipes to your favorites yet.
