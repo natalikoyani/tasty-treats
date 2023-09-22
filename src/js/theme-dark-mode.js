@@ -1,4 +1,4 @@
-let link = './css/dark-theme.css'
+import link from '../css/dark-theme.css';
 
 let switcher = document.querySelectorAll('.switcher');
 let localStorageTheme = localStorage.getItem('darkTheme');
