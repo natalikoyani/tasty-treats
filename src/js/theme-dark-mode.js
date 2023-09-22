@@ -31,7 +31,7 @@ function setTheme(val) {
 function enableCSS() {
      var cssSheet = document.createElement('link');
      cssSheet.rel = 'stylesheet';
-     cssSheet.href = `../css/${link}`;
+     cssSheet.href = `./css/${link}`;
      document.head.appendChild(cssSheet);
 }
 
