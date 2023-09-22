@@ -14,11 +14,16 @@ const cardGallery = document.querySelector('.cards-gallery');
 window.addEventListener('scroll', _.throttle(async () => {
 
      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+     let scrollUpBtn = document.querySelector('.scroll-up-btn');
+     let isScrollBtnHidden = scrollUpBtn.classList.contains('visually-hidden');
+
+     if (!isScrollBtnHidden && scrollTop <= 100) {
+          scrollUpBtn.classList.add('visually-hidden');
+     }
 
      if (scrollTop > lastScrollTop) {
 
-          let scrollUpBtn = document.querySelector('.scroll-up-btn');
-          if (scrollUpBtn.classList.contains('visually-hidden')) {
+          if (isScrollBtnHidden && scrollTop > 100) {
                scrollUpBtn.classList.remove('visually-hidden');
           }
 
