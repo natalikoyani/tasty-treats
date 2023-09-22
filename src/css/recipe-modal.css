@@ -176,6 +176,10 @@
   align-items: flex-start;
 }
 
+.close-modal-recipe-icon {
+  stroke: var(--primary-dark-color);
+}
+
 /* ---------Mobile---------- */
 @media screen and (min-width: 375px) {
   .modal-container {
