@@ -1,4 +1,4 @@
-let link = 'dark-theme';
+let link = 'theme';
 let styleSheet = findLink(link);
 
 let switcher = document.querySelectorAll('.switcher');
@@ -31,3 +31,5 @@ function findLink(name) {
      let links = document.getElementsByTagName('link');
      return Array(...links).find(link => link.href.indexOf(name) !== -1);
 }
+
+console.dir(document.head)
