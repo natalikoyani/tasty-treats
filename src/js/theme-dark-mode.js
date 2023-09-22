@@ -1,4 +1,4 @@
-let link = 'dark-theme.css'
+let link = './css/dark-theme.css'
 
 let switcher = document.querySelectorAll('.switcher');
 let localStorageTheme = localStorage.getItem('darkTheme');
@@ -31,7 +31,7 @@ function setTheme(val) {
 function enableCSS() {
      var cssSheet = document.createElement('link');
      cssSheet.rel = 'stylesheet';
-     cssSheet.href = `../css/${link}`;
+     cssSheet.href = `${link}`;
      document.head.appendChild(cssSheet);
 }
 
