@@ -1,3 +1,5 @@
+import svgIcons from '../img/icons.svg';
+
 export const renderRecipes = (recipes) => {
 
     return recipes.map(recipe => {
@@ -16,7 +18,7 @@ export const renderRecipes = (recipes) => {
     >
 
     <svg class="heart-svg heart-filled" data-_id="${_id}">
-        <use href="./img/icons.svg#heart"></use>
+        <use href="${svgIcons}#heart"></use>
     </svg>
 
     <h3 class="recipe-title">${title}</h3>
@@ -26,27 +28,27 @@ export const renderRecipes = (recipes) => {
         <ul class="recipe-rating">
             <li class="rating-item">
                 <svg class="star-svg${roundedRating > 0 ? ' star-filled' : ''}">
-                    <use href="./img/icons.svg#star"></use>
+                    <use href="${svgIcons}#star"></use>
                 </svg>
             </li>
             <li class="rating-item">
                 <svg class="star-svg${roundedRating > 1 ? ' star-filled' : ''}">
-                    <use href="./img/icons.svg#star"></use>
+                    <use href="${svgIcons}#star"></use>
                 </svg>
             </li>
             <li class="rating-item">
                 <svg class="star-svg${roundedRating > 2 ? ' star-filled' : ''}">
-                    <use href="./img/icons.svg#star"></use>
+                    <use href="${svgIcons}#star"></use>
                 </svg>
             </li>
             <li class="rating-item">
                 <svg class="star-svg${roundedRating > 3 ? ' star-filled' : ''}">
-                    <use href="./img/icons.svg#star"></use>
+                    <use href="${svgIcons}#star"></use>
                 </svg>
             </li>
             <li class="rating-item">
                 <svg class="star-svg${roundedRating > 4 ? ' star-filled' : ''}">
-                    <use href="./img/icons.svg#star"></use>
+                    <use href="${svgIcons}#star"></use>
                 </svg>
             </li>
         </ul>

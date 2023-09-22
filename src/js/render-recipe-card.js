@@ -1,3 +1,5 @@
+import svgIcons from '../img/icons.svg';
+
 export const renderRecipes = recipes => {
     const lsFavorities = localStorage.getItem('favoriteRecipes')
         ? JSON.parse(localStorage.getItem('favoriteRecipes'))
@@ -23,7 +25,7 @@ export const renderRecipes = recipes => {
         >
 
         <svg class="heart-svg${isFavorite > 0 ? ' heart-filled' : ''}">
-            <use href="./img/icons.svg#heart"></use>
+            <use href="${svgIcons}#heart"></use>
         </svg>
 
         <h3 class="recipe-title">${title}</h3>
@@ -34,31 +36,31 @@ export const renderRecipes = recipes => {
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 0 ? ' star-filled' : ''
                 }">
-                        <use href="./img/icons.svg#star"></use>
+                        <use href="${svgIcons}#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 1 ? ' star-filled' : ''
                 }">
-                        <use href="./img/icons.svg#star"></use>
+                        <use href="${svgIcons}#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 2 ? ' star-filled' : ''
                 }">
-                        <use href="./img/icons.svg#star"></use>
+                        <use href="${svgIcons}#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 3 ? ' star-filled' : ''
                 }">
-                        <use href="./img/icons.svg#star"></use>
+                        <use href="${svgIcons}#star"></use>
                     </svg>
                 </li>
                 <li class="rating-item">
                     <svg class="star-svg${roundedRating > 4 ? ' star-filled' : ''
                 }">
-                        <use href="./img/icons.svg#star"></use>
+                        <use href="${svgIcons}#star"></use>
                     </svg>
                 </li>
             </ul>

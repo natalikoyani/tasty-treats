@@ -1,7 +1,9 @@
+import svgIcons from '../img/icons.svg';
+
 let markup = `
 <button type="button" class="scroll-up-btn visually-hidden">
      <svg class="scroll-up-svg" width="30" height="30">
-          <use href="/img/icons.svg#arrow-up"></use>
+          <use href="${svgIcons}#arrow-up"></use>
      </svg>
 </button>
 `

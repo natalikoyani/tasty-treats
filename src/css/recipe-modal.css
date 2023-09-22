@@ -173,6 +173,7 @@
 }
 .tag-and-reting {
   display: flex;
+  align-items: flex-start;
 }
 
 /* ---------Mobile---------- */
