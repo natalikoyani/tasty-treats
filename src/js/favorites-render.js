@@ -1,3 +1,5 @@
+import svgIcons from '../img/icons.svg';
+
 import { renderRecipes } from './render-fav-card';
 
 const favList = document.querySelector('.js-list-fav');
