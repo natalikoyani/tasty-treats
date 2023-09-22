@@ -1,0 +1,150 @@
+body {
+  background-color: var(--additional-dark-color-);
+  color: var(--additional-light-color);
+}
+
+.shopping-cart {
+  stroke: var(--additional-light-color);
+}
+
+.menu-icon {
+  stroke: var(--additional-light-color);
+}
+
+.menu-container {
+  background-color: var(--primary-dark-color);
+}
+
+.all-categories-button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.active-all-categories-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-light-color);
+}
+
+.name-category {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.categories-box {
+  scrollbar-color: rgba(255, 255, 255, 0.18);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.popular-recipe-title {
+  color: inherit;
+}
+
+.popular-card-heading {
+  color: inherit;
+}
+
+.popular-card-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.desc-input {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+}
+
+.search-input:hover,
+.search-input:focus,
+.search-input:active {
+  color: inherit;
+  border: 1px solid var(--accent-color);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-btn {
+  background-color: transparent;
+}
+
+.search-svg {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.btn-reset {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.recipe-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rating-number {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-container {
+  background-color: var(--primary-dark-color);
+  color: inherit;
+}
+
+.modal-rating {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.reting-stars {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+.star-filled {
+  fill: #eea10c;
+}
+
+.ingredient {
+  border-bottom: 1px solid (255, 255, 255, 0.1);
+}
+
+.measure-ingredients {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tag-modal {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.instructions {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.close-modal-recipe-icon {
+  stroke: var(--primary-light-color);
+  fill: var(--primary-light-color);
+}
+
+.hero-img img {
+  border-radius: 15px;
+}
+
+.fav-category-fltr-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.active-category-fav {
+  background-color: var(--accent-color);
+  color: var(--primary-light-color);
+}
+
+.hero-text-fav {
+  color: var(--primary-light-color);
+}

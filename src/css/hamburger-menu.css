@@ -24,7 +24,6 @@
 }
 
 .menu-container .menu-toggle {
-  background-color: var(--accent-color);
   border: none;
   position: absolute;
   top: 20px;

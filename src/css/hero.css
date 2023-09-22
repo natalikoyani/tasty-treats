@@ -45,7 +45,8 @@
   font-size: 14px;
   background-color: transparent;
   font-weight: 500;
-  transition: background-color var(--transition-function), color var(--transition-function);
+  transition: background-color var(--transition-function),
+    color var(--transition-function);
 }
 
 .hero-btn:is(:hover, :focus) {
@@ -243,6 +244,7 @@
     display: flex;
     flex-direction: row;
     gap: 32px;
+    padding-right: 0 !important;
   }
 
   .hero-text-content {
@@ -252,6 +254,7 @@
   .hero-title {
     font-size: 36px;
     margin-bottom: 16px;
+    width: 446px;
   }
 
   .hero-desc {

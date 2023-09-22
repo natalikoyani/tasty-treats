@@ -43,7 +43,7 @@
 }
 
 .switcher:checked + .label-switcher {
-  background: #9bb537b0;
+  background: var(--accent-color);
 }
 
 .switcher:checked + .label-switcher:after {
