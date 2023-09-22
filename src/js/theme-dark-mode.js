@@ -19,9 +19,6 @@ switcher.forEach(s => s.addEventListener('click', (event) => {
      styleSheet.disabled = !val
 }));
 
-
-
-
 function findLink(name) {
      let links = document.getElementsByTagName('link');
      return Array(...links).find(link => link.href.indexOf(name) !== -1);
