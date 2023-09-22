@@ -31,5 +31,3 @@ function findLink(name) {
      let links = document.getElementsByTagName('link');
      return Array(...links).find(link => link.href.indexOf(name) !== -1);
 }
-
-console.dir(document.head)
