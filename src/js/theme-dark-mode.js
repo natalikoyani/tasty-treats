@@ -10,7 +10,6 @@ function allCheck(bol) {
      switcher.forEach(s => s.checked = bol)
 }
 
-
 switcher.forEach(s => s.addEventListener('click', (event) => {
      let val = event.target.checked;
      allCheck(val);
