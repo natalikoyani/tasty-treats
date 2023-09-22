@@ -10,9 +10,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/Team_10/assets/favorites-75dee671.js"></script>
-    <link rel="modulepreload" crossorigin href="/Team_10/assets/header-0980bd10.js">
-    <link rel="stylesheet" href="/Team_10/assets/header-420763a7.css">
+    <script type="module" crossorigin src="/Team_10/assets/favorites-e18c2dd4.js"></script>
+    <link rel="modulepreload" crossorigin href="/Team_10/assets/theme-dark-mode-6718e699.js">
+    <link rel="stylesheet" href="/Team_10/assets/theme-dark-mode-4302ade2.css">
   </head>
   <body>
     <section class="header">
@@ -39,21 +39,20 @@
         href="tel:+38073000000"
       >
         <svg class="cart-icon" width="24" height="24">
-          <use href="/Team_10/assets/icons-1749841b.svg#shopping-cart"></use>
+          <use href="/Team_10/assets/icons-f69d25cf.svg#shopping-cart"></use>
         </svg>
       </a>
-      <a class="link switch-theme" href="#">
-        <svg class="switch-icon" width="46" height="20">
-          <use href="/Team_10/assets/icons-1749841b.svg#switch-grey"></use>
-        </svg>
-      </a>
+      <div class="switch-theme">
+        <input class="switcher" type="checkbox" id="switch-header" />
+        <label class="label-switcher" for="switch-header">Toggle</label>
+      </div>
       <button
         class="menu-toggle js-open-menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
         <svg class="menu-icon" width="32" height="32">
-          <use href="/Team_10/assets/icons-1749841b.svg#hamburger"></use>
+          <use href="/Team_10/assets/icons-f69d25cf.svg#hamburger"></use>
         </svg>
       </button>
     </div>
@@ -111,7 +110,7 @@
     <div class="menu-container js-menu-container" id="mobile-menu">
   <button class="menu-toggle js-close-menu">
     <svg class="menu-close-btn" width="32" height="32">
-      <use href="/Team_10/assets/icons-1749841b.svg#x-mobile-menu"></use>
+      <use href="/Team_10/assets/icons-f69d25cf.svg#x-mobile-menu"></use>
     </svg>
   </button>
 
@@ -123,12 +122,10 @@
       <a href="./favorites.html" class="mobile-link">Favorites</a>
     </li>
   </ul>
-
-  <a class="link switch-theme-hamburger" href="#">
-    <svg class="switch-icon-hamburger" width="46" height="20">
-      <use href="/Team_10/assets/icons-1749841b.svg#switch-grey" width="46" height="20"></use>
-    </svg>
-  </a>
+  <div class="switch-theme-hamburger">
+    <input class="switcher" type="checkbox" id="switch-hamburger" />
+    <label class="label-switcher" for="switch-hamburger">Toggle</label>
+  </div>
 </div>
 
     <!-- visually-hidden -->
@@ -137,7 +134,7 @@
     <div class="js-create-modal"></div>
     <button class="close-modal-recipe" type="button" data-modal-close>
       <svg class="close-modal-recipe-icon" width="20" height="20">
-        <use href="/Team_10/assets/icons-1749841b.svg#x-modal"></use>
+        <use href="/Team_10/assets/icons-f69d25cf.svg#x-modal"></use>
       </svg>
     </button>
   </div>
