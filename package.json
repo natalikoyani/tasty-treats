@@ -21,6 +21,7 @@
     "modern-normalize": "^2.0.0",
     "notiflix": "^3.2.6",
     "slim-select": "^2.6.0",
+    "svg-inline-loader": "^0.8.2",
     "swiper": "^10.2.0",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"

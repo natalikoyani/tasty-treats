@@ -3,6 +3,9 @@ import { renderIngridients } from './render-ingridients';
 import { renderVideo } from './render-video';
 import { renderInstruction } from './renfer-inrtruction';
 
+import svgIcons from '.${svgIcons}';
+console.log(svgIcons);
+
 export function renderModalRecipe(recipe) {
   const {
     _id,
@@ -50,23 +53,23 @@ export function renderModalRecipe(recipe) {
             <div>
               <svg class="reting-stars${roundedRating > 0 ? ' star-filled' : ''
     }" width="18" height="18">
-                <use href="./img/icons.svg#star"></use>
+                <use href="${svgIcons}#star"></use>
               </svg>
               <svg class="reting-stars${roundedRating > 1 ? ' star-filled' : ''
     }" width="18" height="18">
-                <use href="./img/icons.svg#star"></use>
+                <use href="${svgIcons}#star"></use>
               </svg>
               <svg class="reting-stars${roundedRating > 2 ? ' star-filled' : ''
     }" width="18" height="18">
-                <use href="./img/icons.svg#star"></use>
+                <use href="${svgIcons}#star"></use>
               </svg>
               <svg class="reting-stars${roundedRating > 3 ? ' star-filled' : ''
     }" width="18" height="18">
-                <use href="./img/icons.svg#star"></use>
+                <use href="${svgIcons}#star"></use>
               </svg>
               <svg class="reting-stars${roundedRating > 4 ? ' star-filled' : ''
     }" width="18" height="18">
-                <use href="./img/icons.svg#star"></use>
+                <use href="${svgIcons}#star"></use>
               </svg>
             </div>
             <p class="time-cook">${time}min</p>
