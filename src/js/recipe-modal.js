@@ -4,7 +4,6 @@ import { renderVideo } from './render-video';
 import { renderInstruction } from './renfer-inrtruction';
 
 import svgIcons from '../img/icons.svg';
-console.log(svgIcons);
 
 export function renderModalRecipe(recipe) {
   const {

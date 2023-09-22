@@ -36,7 +36,7 @@ export function creatMarkupFavorite(arr) {
   } else {
     markupEmpty = `<li class="hero-mob-wrapper">
             <svg class="hero-fav-svg">
-            <use href="./img/icons.svg#hat"></use>
+            <use href="${svgIcons}#hat"></use>
           </svg>
             <p class="hero-text-fav">
               It appears that you haven't added any recipes to your favorites yet.
