@@ -35,3 +35,4 @@ scrollUpBtn.addEventListener('click', () => {
   scrollUpBtn.classList.add('visually-hidden');
 })
 
+
