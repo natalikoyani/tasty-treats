@@ -17,7 +17,7 @@ import './js/open-recipe-modal.js';
 import './js/scroll-fetching.js';
 import './js/loader.js';
 import './js/scroll-up-button';
-import './js/theme-dark-mode';
+// import './js/theme-dark-mode';
 
 renderGallery();
 const categories = document.querySelector('.categories-list');
