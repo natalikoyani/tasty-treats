@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "tasty-treats",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Team_10/",
+    "build": "vite build --base=/tasty-treats/",
     "preview": "vite preview"
   },
   "devDependencies": {
